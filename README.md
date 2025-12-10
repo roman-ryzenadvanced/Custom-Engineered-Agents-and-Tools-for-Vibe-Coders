@@ -472,7 +472,7 @@ claude
 
 Explore a collection of HTML5 mini-games developed using **Vibe Coding** techniques.
 
-[**Browse Games Collection**](https://gitlab.com/ryzenadvanced/vibecoding-games/-/tree/main)
+[**Browse Games Collection**](https://github.com/ryzenadvanced-beep/Custom-Engineered-Agents-and-Tools-for-Vibe-Coders/tree/main/vibecoding-games)
 
 ---
 
