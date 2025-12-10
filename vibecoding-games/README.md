@@ -3,13 +3,42 @@
 I am creating here mini html5 based games using vibe coding practice. You may feel free to try my games.
 
 ## How to access my mini games:
-
-* [My HTML5 Games List](https://gitlab.com/ryzenadvanced/vibecoding-games/-/tree/main)
--> Download the html file and run locally. Enjoy! 
+1. Download the html file.
+2. Run it locally in your browser.
+3. Enjoy!
 
 --> Go back to the vibe coders blog on gitlab [Here](https://gitlab.com/ryzenadvanced/ultimate-custom-engineered-coding-agents-trae-ai-glm-4-6-vibe-coding-lab/-/blob/master/README.md#-claude-code-with-glm-46-power)
 
+---
 
+## 🎮 Game Showcase
+
+### 1. OFFLOGIC: 98 EDITION
+**File:** `OFFLOGIC_98_v3._classic_version.html`
+
+A retro-styled puzzle and logic game that takes you back to the Windows 98 era. Features a CRT monitor aesthetic, scanlines, and "hacking" style gameplay. Test your reflexes and logic skills as you progress through difficulty levels from Novice to Glitch.
+
+![OFFLOGIC Game](https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=retro%20crt%20monitor%20interface%20green%20text%20black%20background%20windows%2098%20style%20pixel%20art%20hacking%20game&image_size=landscape_16_9)
+
+---
+
+### 2. QuestRoom | Vibe Coding Saga (GLM 4.6 Edition)
+**File:** `VibeCoding_Saga__GLM_4.6_.html`
+
+An immersive coding RPG simulation created with GLM 4.6. Enter the "QuestRoom" and choose your path from Intern to Vibe God. Solve coding challenges against the clock in a beautiful twilight-themed interface with neon indigo aesthetics.
+
+![Vibe Coding Saga GLM](https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20coding%20game%20interface%20neon%20purple%20indigo%20twilight%20moon%20atmosphere%20rpg%20stats&image_size=landscape_16_9)
+
+---
+
+### 3. QuestRoom | Vibe Coding Saga (Gemini 3 Edition)
+**File:** `VibeCoding_Saga__Gemini_3_.html`
+
+The Gemini 3 Pro generated version of the Vibe Coding Saga. Experience the coding quest with a distinct flavor. Compare how different AI models architect the same game concept while enjoying the deep space coding atmosphere.
+
+![Vibe Coding Saga Gemini](https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20coding%20game%20interface%20cyan%20blue%20deep%20space%20gemini%20constellation%20background%20sleek%20ui&image_size=landscape_16_9)
+
+---
 
 ## Reminder: 
 
