@@ -43,51 +43,78 @@
 
 ### OPUS Series
 
-| # | Agent | Description |
-| :---: | :--- | :--- |
-| 1 | [**Claude Opus 4.5 Wrap**](https://s.trae.ai/a/c5a3e9) | Offers major models some of the development patterns of the popular Claude Opus 4.5 model (Variation 1). |
-| 2 | [**OPUS FRAMEWORK 4.5**](https://s.trae.ai/a/114be4) | Offers major models some of the development patterns of the popular Claude Opus 4.5 model (Variation 2). |
-| 3 | [**OPUS QA ENGINEER**](https://s.trae.ai/a/01708c) | Trained to enhance the AI models ability for quality assurance process, based on Opus model. |
-
-<details>
-<summary><strong>📸 View Agent Cards</strong></summary>
-<br>
+<table>
+<tr>
+<td width="33%" align="center">
 <a href="https://s.trae.ai/a/c5a3e9"><img src="assets/claude_opus_4_5_wrap.svg" alt="Claude Opus 4.5 Wrap" width="100%"></a>
+<br><strong>Claude Opus 4.5 Wrap</strong>
+<br><sub>Development patterns of Claude Opus 4.5 (Variation 1)</sub>
+<br><a href="https://s.trae.ai/a/c5a3e9">Install Agent</a>
+</td>
+<td width="33%" align="center">
 <a href="https://s.trae.ai/a/114be4"><img src="assets/opus_framework_4_5.svg" alt="OPUS FRAMEWORK 4.5" width="100%"></a>
+<br><strong>OPUS FRAMEWORK 4.5</strong>
+<br><sub>Development patterns of Claude Opus 4.5 (Variation 2)</sub>
+<br><a href="https://s.trae.ai/a/114be4">Install Agent</a>
+</td>
+<td width="33%" align="center">
 <a href="https://s.trae.ai/a/01708c"><img src="assets/opus_qa_engineer.svg" alt="OPUS QA ENGINEER" width="100%"></a>
-</details>
+<br><strong>OPUS QA ENGINEER</strong>
+<br><sub>Enhanced QA process based on Opus model</sub>
+<br><a href="https://s.trae.ai/a/01708c">Install Agent</a>
+</td>
+</tr>
+</table>
 
 ### Specialized Agents
 
-| # | Agent | Description |
-| :---: | :--- | :--- |
-| 4 | [**KIRO TRAE ULTRA X**](https://s.trae.ai/a/25f7a7) | Offers the large models some of the process concepts of the Amazon Kiro agent. More autonomous, less disruptive development. |
-| 5 | [**Apex Omni**](https://s.trae.ai/a/4c48cd) | The "overclock" agent, offers lower end models like Gemini 2.5 Flash, a set of high-end model operation "skills". |
-| 6 | [**PWA Generator**](https://s.trae.ai/a/a5ec8c) | Instantly transform web apps into installable PWAs. Automates manifest creation, service worker setup, and icon generation. |
-| 7 | [**Loop Breaker**](https://s.trae.ai/a/8a1286) | Designed to break infinite loops and resolve stuck reasoning cycles in your AI development workflow. |
-
-<details>
-<summary><strong>📸 View Agent Cards</strong></summary>
-<br>
+<table>
+<tr>
+<td width="25%" align="center">
 <a href="https://s.trae.ai/a/25f7a7"><img src="assets/kiro_trae_ultra_x.svg" alt="KIRO TRAE ULTRA X" width="100%"></a>
+<br><strong>KIRO TRAE ULTRA X</strong>
+<br><sub>Amazon Kiro agent concepts</sub>
+<br><a href="https://s.trae.ai/a/25f7a7">Install Agent</a>
+</td>
+<td width="25%" align="center">
 <a href="https://s.trae.ai/a/4c48cd"><img src="assets/apex_omni.svg" alt="Apex Omni" width="100%"></a>
+<br><strong>Apex Omni</strong>
+<br><sub>Overclock for lower-end models</sub>
+<br><a href="https://s.trae.ai/a/4c48cd">Install Agent</a>
+</td>
+<td width="25%" align="center">
 <a href="https://s.trae.ai/a/a5ec8c"><img src="assets/pwa_generator.svg" alt="PWA Generator" width="100%"></a>
+<br><strong>PWA Generator</strong>
+<br><sub>Transform web apps into PWAs</sub>
+<br><a href="https://s.trae.ai/a/a5ec8c">Install Agent</a>
+</td>
+<td width="25%" align="center">
 <a href="https://s.trae.ai/a/8a1286"><img src="assets/loop_breaker.svg" alt="Loop Breaker" width="100%"></a>
-</details>
+<br><strong>Loop Breaker</strong>
+<br><sub>Break infinite reasoning loops</sub>
+<br><a href="https://s.trae.ai/a/8a1286">Install Agent</a>
+</td>
+</tr>
+</table>
 
 ### Defense Series
 
-| # | Agent | Description |
-| :---: | :--- | :--- |
-| 8 | [**Amnesia Defense**](https://s.trae.ai/a/0bfb9e) | Enhances the AI process to minimize instances where work is reported as done, but isn't actually complete. |
-| 9 | [**ANTI-AMNESIA v2**](https://s.trae.ai/a/3f7075) | Improved version to combat AI "forgetting" to complete tasks. |
-
-<details>
-<summary><strong>📸 View Agent Cards</strong></summary>
-<br>
+<table>
+<tr>
+<td width="50%" align="center">
 <a href="https://s.trae.ai/a/0bfb9e"><img src="assets/amnesia_defense.svg" alt="Amnesia Defense" width="100%"></a>
+<br><strong>Amnesia Defense</strong>
+<br><sub>Minimize AI "forgetting" to complete tasks</sub>
+<br><a href="https://s.trae.ai/a/0bfb9e">Install Agent</a>
+</td>
+<td width="50%" align="center">
 <a href="https://s.trae.ai/a/3f7075"><img src="assets/anti_amnesia_v2.svg" alt="ANTI-AMNESIA v2" width="100%"></a>
-</details>
+<br><strong>ANTI-AMNESIA v2</strong>
+<br><sub>Improved version to combat AI amnesia</sub>
+<br><a href="https://s.trae.ai/a/3f7075">Install Agent</a>
+</td>
+</tr>
+</table>
 
 ---
 
