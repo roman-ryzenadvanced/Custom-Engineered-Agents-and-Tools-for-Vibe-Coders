@@ -222,6 +222,8 @@ The **Vision MCP Server** brings GLM-4.5V's advanced visual capabilities directl
 
 ---
 
+> 📱 **Make your web app installable on Android devices.** This step-by-step guide shows you how to configure Vite for PWA, create an install button component, and handle iOS fallback instructions.
+
 <details>
 <summary><h3>📱 PWA Recipe</h3></summary>
 
@@ -326,6 +328,8 @@ Open Chrome DevTools -> Application tab -> Manifest to verify your manifest is l
 </details>
 
 ---
+
+> 🤖 **Automate PWA integration with AI.** Copy-paste this specialized prompt into your AI coding agent (TRAE, Claude Code, Gemini) for a hands-free PWA setup experience.
 
 <details>
 <summary><h3>🤖 AI Push Prompt</h3></summary>
