@@ -18,7 +18,7 @@
 
 **Setup GLM-4.6 with TRAE:**
 *   🎟️ **Need a plan?** Do this first: [**Get 10% Discount** on GLM Models](https://z.ai/subscribe?ic=R0K78RJKNW)
-*   📄 **Having GLM Plan already?** [**GLM-4.6 Integration Guide (PDF)**](https://gitlab.com/ryzenadvanced/ultimate-custom-engineered-coding-agents-trae-ai-glm-4-6-vibe-coding-lab/-/blob/master/Adding_GLM_4.6_Model_to_TRAE__A_Visual_Guide__3_.pdf)
+*   📄 **Having GLM Plan already?** [**GLM-4.6 Integration Guide (PDF)**](./Adding_GLM_4.6_Model_to_TRAE__A_Visual_Guide__3_.pdf)
 
 ## 🚀 Why use SOLO with GLM 4.6?
 
@@ -29,7 +29,7 @@
 ## 🎯Latest Hackathon participation
 *   **OffLogic** Game is the ultimate reflex challenge for developers and UI designers. 
     An interactive experience that tests your coding speed, precision, and aesthetic preference.
-*   [Souce code of OffLogic](https://gitlab.com/ryzenadvanced/vibecoding-games/-/blob/dde7858e555fb9dc755fb83e0d0ee34c9597c83c/OFFLOGIC_98_v3._classic_version.html)
+*   [Souce code of OffLogic](./vibecoding-games/OFFLOGIC_98_v3._classic_version.html)
 
 ## 🤖 Available Agents
 

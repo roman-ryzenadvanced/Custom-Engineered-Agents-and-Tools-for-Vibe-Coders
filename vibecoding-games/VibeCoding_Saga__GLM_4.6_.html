@@ -1,0 +1,907 @@
+<html lang="en"><head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<style>
+					body {
+						background-color: white; /* Ensure the iframe has a white background */
+					}
+				</style>
+			<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.bottom-0{bottom:0px}.bottom-1{bottom:0.25rem}.left-0{left:0px}.left-3{left:0.75rem}.right-1{right:0.25rem}.top-1{top:0.25rem}.top-3\.5{top:0.875rem}.z-10{z-index:10}.z-50{z-index:50}.m-auto{margin:auto}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-1{height:0.25rem}.h-2{height:0.5rem}.h-24{height:6rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-8{height:2rem}.h-\[220px\]{height:220px}.h-full{height:100%}.min-h-\[550px\]{min-height:550px}.min-h-screen{min-height:100vh}.w-2{width:0.5rem}.w-24{width:6rem}.w-\[1px\]{width:1px}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-5xl{max-width:64rem}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.flex-grow{flex-grow:1}@keyframes bounce{0%, 100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(0.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,0.2,1)}}.animate-bounce{animation:bounce 1s infinite}@keyframes ping{75%, 100%{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-b-lg{border-bottom-right-radius:0.5rem;border-bottom-left-radius:0.5rem}.rounded-t-lg{border-top-left-radius:0.5rem;border-top-right-radius:0.5rem}.border{border-width:1px}.border-y{border-top-width:1px;border-bottom-width:1px}.border-b{border-bottom-width:1px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-blue-800\/40{border-color:rgb(30 64 175 / 0.4)}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-indigo-500\/10{border-color:rgb(99 102 241 / 0.1)}.border-indigo-500\/20{border-color:rgb(99 102 241 / 0.2)}.border-indigo-500\/30{border-color:rgb(99 102 241 / 0.3)}.border-indigo-900\/30{border-color:rgb(49 46 129 / 0.3)}.border-indigo-900\/50{border-color:rgb(49 46 129 / 0.5)}.border-orange-800\/40{border-color:rgb(154 52 18 / 0.4)}.border-purple-800\/50{border-color:rgb(107 33 168 / 0.5)}.border-red-900\/50{border-color:rgb(127 29 29 / 0.5)}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-700\/50{border-color:rgb(51 65 85 / 0.5)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-slate-800\/50{border-color:rgb(30 41 59 / 0.5)}.bg-black\/60{background-color:rgb(0 0 0 / 0.6)}.bg-blue-900\/20{background-color:rgb(30 58 138 / 0.2)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-emerald-500\/20{background-color:rgb(16 185 129 / 0.2)}.bg-indigo-900\/10{background-color:rgb(49 46 129 / 0.1)}.bg-indigo-950\/20{background-color:rgb(30 27 75 / 0.2)}.bg-orange-900\/20{background-color:rgb(124 45 18 / 0.2)}.bg-purple-900\/30{background-color:rgb(88 28 135 / 0.3)}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/40{background-color:rgb(15 23 42 / 0.4)}.bg-slate-900\/80{background-color:rgb(15 23 42 / 0.8)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-slate-950\/40{background-color:rgb(2 6 23 / 0.4)}.bg-slate-950\/90{background-color:rgb(2 6 23 / 0.9)}.bg-slate-950\/95{background-color:rgb(2 6 23 / 0.95)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.from-indigo-600{--tw-gradient-from:#4f46e5 var(--tw-gradient-from-position);--tw-gradient-to:rgb(79 70 229 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-indigo-900{--tw-gradient-from:#312e81 var(--tw-gradient-from-position);--tw-gradient-to:rgb(49 46 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-100{--tw-gradient-from:#f1f5f9 var(--tw-gradient-from-position);--tw-gradient-to:rgb(241 245 249 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-950{--tw-gradient-from:#020617 var(--tw-gradient-from-position);--tw-gradient-to:rgb(2 6 23 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-indigo-500{--tw-gradient-to:rgb(99 102 241 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #6366f1 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-purple-900{--tw-gradient-to:rgb(88 28 135 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #581c87 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-indigo-900{--tw-gradient-to:#312e81 var(--tw-gradient-to-position)}.to-purple-600{--tw-gradient-to:#9333ea var(--tw-gradient-to-position)}.to-slate-400{--tw-gradient-to:#94a3b8 var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.object-cover{object-fit:cover}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.pb-2{padding-bottom:0.5rem}.pb-4{padding-bottom:1rem}.pl-12{padding-left:3rem}.pr-2{padding-right:0.5rem}.pt-2{padding-top:0.5rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}.text-9xl{font-size:8rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[14px\]{font-size:14px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-\[0\.3em\]{letter-spacing:0.3em}.tracking-widest{letter-spacing:0.1em}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-blue-200\/50{color:rgb(191 219 254 / 0.5)}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-blue-500\/50{color:rgb(59 130 246 / 0.5)}.text-cyan-200\/50{color:rgb(165 243 252 / 0.5)}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.text-cyan-500\/50{color:rgb(6 182 212 / 0.5)}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-emerald-500\/50{color:rgb(16 185 129 / 0.5)}.text-indigo-100{--tw-text-opacity:1;color:rgb(224 231 255 / var(--tw-text-opacity, 1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.text-indigo-200\/50{color:rgb(199 210 254 / 0.5)}.text-indigo-200\/60{color:rgb(199 210 254 / 0.6)}.text-indigo-300{--tw-text-opacity:1;color:rgb(165 180 252 / var(--tw-text-opacity, 1))}.text-indigo-300\/70{color:rgb(165 180 252 / 0.7)}.text-indigo-300\/80{color:rgb(165 180 252 / 0.8)}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.text-indigo-500\/50{color:rgb(99 102 241 / 0.5)}.text-orange-400{--tw-text-opacity:1;color:rgb(251 146 60 / var(--tw-text-opacity, 1))}.text-purple-200{--tw-text-opacity:1;color:rgb(233 213 255 / var(--tw-text-opacity, 1))}.text-purple-200\/50{color:rgb(233 213 255 / 0.5)}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-purple-500\/50{color:rgb(168 85 247 / 0.5)}.text-red-200\/50{color:rgb(254 202 202 / 0.5)}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-red-900\/20{color:rgb(127 29 29 / 0.2)}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.placeholder-slate-700::placeholder{--tw-placeholder-opacity:1;color:rgb(51 65 85 / var(--tw-placeholder-opacity, 1))}.opacity-0{opacity:0}.opacity-10{opacity:0.1}.opacity-50{opacity:0.5}.opacity-70{opacity:0.7}.mix-blend-overlay{mix-blend-mode:overlay}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_0_15px_rgba\(79\2c 70\2c 229\2c 0\.2\)\]{--tw-shadow:0 0 15px rgba(79,70,229,0.2);--tw-shadow-colored:0 0 15px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_0_30px_rgba\(16\2c 185\2c 129\2c 0\.2\)\]{--tw-shadow:0 0 30px rgba(16,185,129,0.2);--tw-shadow-colored:0 0 30px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-1000{transition-duration:1000ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.ease-in-out{transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}.selection\:bg-indigo-900 *::selection{--tw-bg-opacity:1;background-color:rgb(49 46 129 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-indigo-900::selection{--tw-bg-opacity:1;background-color:rgb(49 46 129 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-blue-400:hover{--tw-border-opacity:1;border-color:rgb(96 165 250 / var(--tw-border-opacity, 1))}.hover\:border-cyan-400:hover{--tw-border-opacity:1;border-color:rgb(34 211 238 / var(--tw-border-opacity, 1))}.hover\:border-indigo-400:hover{--tw-border-opacity:1;border-color:rgb(129 140 248 / var(--tw-border-opacity, 1))}.hover\:border-indigo-500:hover{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.hover\:border-purple-400:hover{--tw-border-opacity:1;border-color:rgb(192 132 252 / var(--tw-border-opacity, 1))}.hover\:border-red-500:hover{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.hover\:bg-blue-900\/40:hover{background-color:rgb(30 58 138 / 0.4)}.hover\:bg-blue-950\/40:hover{background-color:rgb(23 37 84 / 0.4)}.hover\:bg-cyan-950\/40:hover{background-color:rgb(8 51 68 / 0.4)}.hover\:bg-indigo-900:hover{--tw-bg-opacity:1;background-color:rgb(49 46 129 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-950\/40:hover{background-color:rgb(30 27 75 / 0.4)}.hover\:bg-orange-900\/40:hover{background-color:rgb(124 45 18 / 0.4)}.hover\:bg-purple-900\/50:hover{background-color:rgb(88 28 135 / 0.5)}.hover\:bg-purple-950\/40:hover{background-color:rgb(59 7 100 / 0.4)}.hover\:bg-red-950\/20:hover{background-color:rgb(69 10 10 / 0.2)}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.hover\:from-indigo-500:hover{--tw-gradient-from:#6366f1 var(--tw-gradient-from-position);--tw-gradient-to:rgb(99 102 241 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-purple-500:hover{--tw-gradient-to:#a855f7 var(--tw-gradient-to-position)}.hover\:text-purple-300:hover{--tw-text-opacity:1;color:rgb(216 180 254 / var(--tw-text-opacity, 1))}.hover\:opacity-90:hover{opacity:0.9}.focus\:border-indigo-500:focus{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-1:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-indigo-500\/50:focus{--tw-ring-color:rgb(99 102 241 / 0.5)}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-50:disabled{opacity:0.5}.group:hover .group-hover\:text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-cyan-200{--tw-text-opacity:1;color:rgb(165 243 252 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-purple-200{--tw-text-opacity:1;color:rgb(233 213 255 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-red-200{--tw-text-opacity:1;color:rgb(254 202 202 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 768px){.md\:col-span-2{grid-column:span 2 / span 2}.md\:block{display:block}.md\:h-auto{height:auto}.md\:w-1\/2{width:50%}.md\:w-auto{width:auto}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:justify-start{justify-content:flex-start}.md\:p-10{padding:2.5rem}.md\:p-8{padding:2rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-7xl{font-size:4.5rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}</style></head>
+			<body class="min-h-screen flex flex-col justify-between selection:bg-indigo-900 selection:text-white">
+				
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuestRoom | Vibe Coding Saga</title>
+    <script src="https://artifacts-cdn.chatglm.site/https://cdn.tailwindcss.com"></script>
+    <link href="https://artifacts-cdn.chatglm.site/https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+    <link href="https://artifacts-cdn.chatglm.site/https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&amp;family=Fira+Code:wght@300;400;700&amp;family=Lato:wght@300;400&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #020617;
+            color: #e2e8f0;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #020617 60%, #000000 100%);
+        }
+        
+        .font-twilight {
+            font-family: 'Cinzel', serif;
+        }
+        
+        .font-code {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .text-shadow-moon {
+            text-shadow: 0 0 10px rgba(226, 232, 240, 0.5), 0 0 20px rgba(165, 180, 252, 0.3);
+        }
+        
+        .box-shadow-twilight {
+            box-shadow: 0 0 25px rgba(99, 102, 241, 0.1);
+        }
+
+        .border-glow {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+        
+        .border-glow:hover {
+            border-color: rgba(165, 180, 252, 0.5);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .mist {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://artifacts-cdn.chatglm.site/https://media.giphy.com/media/Qw4X3FnmFFCPANtlhtK/giphy.gif') center/cover;
+            opacity: 0.05;
+            pointer-events: none;
+            mix-blend-mode: screen;
+            z-index: 0;
+        }
+
+        .stars {
+            width: 1px;
+            height: 1px;
+            background: transparent;
+            box-shadow: 100px 100px #FFF, 200px 300px #FFF, 500px 100px #FFF, 700px 500px #FFF, 900px 100px #FFF, 1100px 300px #FFF;
+            animation: twinkle 100s linear infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.5;
+        }
+        
+        @keyframes twinkle {
+            from { transform: translateY(0); }
+            to { transform: translateY(-1000px); }
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 3px; }
+
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        .animate-fade-up {
+            animation: fadeUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+
+    <!-- Atmospheric Background Elements -->
+    <div class="stars"></div>
+    <div class="mist"></div>
+    
+    <!-- App Container -->
+    <div class="flex-grow flex flex-col items-center justify-center p-4 w-full max-w-5xl mx-auto relative z-10" id="app">
+        <!-- MAIN MENU -->
+        <div class="w-full text-center space-y-8 animate-fade-up" id="menu-screen">
+            <!-- Header -->
+            <div class="space-y-4 relative">
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent mx-auto mb-6 opacity-50"></div>
+                <h1 class="text-5xl md:text-7xl font-twilight font-bold text-transparent bg-clip-text bg-gradient-to-b from-slate-100 to-slate-400 tracking-widest text-shadow-moon pb-2">
+                    VIBE CODING
+                </h1>
+                <p class="text-lg md:text-xl text-indigo-200/60 font-twilight tracking-[0.3em] uppercase">
+                    The Quest Saga
+                </p>
+            </div>
+            
+            <!-- Glass Card Container -->
+            <div class="bg-slate-950/40 border border-indigo-500/20 p-8 md:p-10 rounded-xl shadow-2xl backdrop-blur-md max-w-3xl mx-auto box-shadow-twilight">
+                <div class="mb-8">
+                    <p class="text-indigo-300/80 mb-6 font-twilight text-sm uppercase tracking-widest border-b border-indigo-500/20 pb-2 inline-block px-8">
+                        Choose Your Fate
+                    </p>
+                    
+                    <!-- Difficulty Selection -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <button class="diff-btn group relative p-4 border border-slate-700/50 hover:border-indigo-400 bg-slate-900/40 hover:bg-indigo-950/40 rounded-lg transition-all duration-300 text-left flex flex-col justify-center h-24" data-difficulty="1">
+                            <div class="flex justify-between items-center w-full">
+                                <span class="font-twilight font-bold text-lg text-slate-300 group-hover:text-white transition-colors">INTERN</span>
+                                <span class="material-symbols-outlined text-indigo-500/50 group-hover:text-indigo-400">hourglass_empty</span>
+                            </div>
+                            <span class="text-xs text-indigo-200/50 mt-1 font-mono group-hover:text-indigo-200">15 Min • Unlimited Guidance</span>
+                        </button>
+                        
+                        <button class="diff-btn group relative p-4 border border-slate-700/50 hover:border-cyan-400 bg-slate-900/40 hover:bg-cyan-950/40 rounded-lg transition-all duration-300 text-left flex flex-col justify-center h-24" data-difficulty="2">
+                            <div class="flex justify-between items-center w-full">
+                                <span class="font-twilight font-bold text-lg text-slate-300 group-hover:text-white transition-colors">JUNIOR</span>
+                                <span class="material-symbols-outlined text-cyan-500/50 group-hover:text-cyan-400">code</span>
+                            </div>
+                            <span class="text-xs text-cyan-200/50 mt-1 font-mono group-hover:text-cyan-200">10 Min • 5 Hints</span>
+                        </button>
+                        
+                        <button class="diff-btn group relative p-4 border border-slate-700/50 hover:border-blue-400 bg-slate-900/40 hover:bg-blue-950/40 rounded-lg transition-all duration-300 text-left flex flex-col justify-center h-24" data-difficulty="3">
+                            <div class="flex justify-between items-center w-full">
+                                <span class="font-twilight font-bold text-lg text-slate-300 group-hover:text-white transition-colors">SENIOR</span>
+                                <span class="material-symbols-outlined text-blue-500/50 group-hover:text-blue-400">terminal</span>
+                            </div>
+                            <span class="text-xs text-blue-200/50 mt-1 font-mono group-hover:text-blue-200">7 Min • 3 Hints</span>
+                        </button>
+                        
+                        <button class="diff-btn group relative p-4 border border-slate-700/50 hover:border-purple-400 bg-slate-900/40 hover:bg-purple-950/40 rounded-lg transition-all duration-300 text-left flex flex-col justify-center h-24" data-difficulty="4">
+                            <div class="flex justify-between items-center w-full">
+                                <span class="font-twilight font-bold text-lg text-slate-300 group-hover:text-white transition-colors">10x DEV</span>
+                                <span class="material-symbols-outlined text-purple-500/50 group-hover:text-purple-400">rocket_launch</span>
+                            </div>
+                            <span class="text-xs text-purple-200/50 mt-1 font-mono group-hover:text-purple-200">5 Min • No Hints</span>
+                        </button>
+                        
+                        <button class="diff-btn md:col-span-2 group relative p-4 border border-slate-700/50 hover:border-red-500 bg-slate-900/40 hover:bg-red-950/20 rounded-lg transition-all duration-300 text-center flex flex-col items-center justify-center h-24" data-difficulty="5">
+                            <span class="font-twilight font-bold text-xl text-slate-300 group-hover:text-red-400 transition-colors tracking-widest">VIBE GOD</span>
+                            <span class="text-xs text-red-200/50 mt-1 font-mono group-hover:text-red-200 animate-pulse">3 Min • Blind Input • Total Darkness</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Stats Row -->
+                <div class="hidden mb-8 py-3 border-y border-indigo-500/10 flex justify-between items-center px-4 bg-indigo-950/20" id="session-best-container">
+                    <span class="text-xs text-indigo-300/70 uppercase tracking-widest font-twilight">Session Record</span>
+                    <span class="text-lg text-indigo-100 font-code font-bold text-shadow-moon" id="session-best-score">0 XP</span>
+                </div>
+                
+                <!-- Start Action -->
+                <button class="w-full bg-slate-800 text-slate-500 font-bold py-5 rounded-lg border border-slate-700 transition-all duration-500 uppercase tracking-[0.2em] font-twilight text-lg relative overflow-hidden group disabled:cursor-not-allowed disabled:opacity-50" id="start-btn" disabled="">
+                    <span class="relative z-10 group-hover:text-white transition-colors duration-300">Enter The Simulation</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </button>
+            </div>
+            
+            <p class="text-[10px] text-slate-500 max-w-md mx-auto font-code mt-4 opacity-50">
+                System: Trae.ai Architecture // Vibe: Immaculate
+            </p>
+        </div>
+        
+        <!-- GAMEPLAY SCREEN -->
+        <div class="w-full hidden flex-col gap-6 animate-fade-in" id="game-screen">
+            <!-- HUD -->
+            <div class="flex flex-col md:flex-row justify-between items-center bg-slate-900/80 border-b border-indigo-500/30 p-4 rounded-t-lg shadow-lg backdrop-blur gap-4">
+                <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-start">
+                    <div class="flex items-center gap-2 text-indigo-300">
+                        <span class="material-symbols-outlined">folder_open</span>
+                        <span class="text-xl font-bold font-code">FILE <span id="room-number">1</span>.js</span>
+                    </div>
+                    <div class="h-8 w-[1px] bg-slate-700 hidden md:block"></div>
+                    <div class="flex items-center gap-2 text-purple-400">
+                        <span class="material-symbols-outlined">bug_report</span>
+                        <span class="text-sm font-code">BUGS: 0</span>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col items-center bg-black/60 px-8 py-2 rounded-full border border-indigo-900/50 w-full md:w-auto shadow-[0_0_15px_rgba(79,70,229,0.2)]">
+                    <span class="text-[10px] text-indigo-400 uppercase tracking-widest font-twilight">Time Remaining</span>
+                    <span class="text-3xl font-code font-bold text-white tracking-widest text-shadow-moon" id="timer">00:00</span>
+                </div>
+                
+                <div class="flex items-center gap-2 w-full md:w-auto justify-end">
+                    <span class="text-xl font-bold font-code text-amber-400"><span id="score">0</span> XP</span>
+                    <span class="material-symbols-outlined text-amber-400">token</span>
+                </div>
+            </div>
+            
+            <!-- MAIN CONTENT AREA -->
+            <div class="relative bg-slate-950 border border-indigo-500/20 rounded-b-lg overflow-hidden shadow-2xl min-h-[550px] flex flex-col md:flex-row group">
+                <!-- VISUAL -->
+                <div class="w-full md:w-1/2 h-64 md:h-auto relative bg-slate-900 border-r border-slate-800 overflow-hidden">
+                    <img alt="Room Visual" class="w-full h-full object-cover opacity-70 transition-all duration-1000 ease-in-out hover:scale-105 hover:opacity-90" id="room-image" src="">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                    <div class="absolute inset-0 bg-indigo-900/10 mix-blend-overlay"></div>
+                    <div class="absolute inset-0 opacity-10 pointer-events-none overflow-hidden" style="background-image: url('https://artifacts-cdn.chatglm.site/https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif'); background-size: cover; mix-blend-mode: screen;"></div>
+                </div>
+                
+                <!-- PUZZLE -->
+                <div class="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between relative bg-slate-950/95">
+                    <!-- Narrative -->
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between items-start border-b border-indigo-900/30 pb-4">
+                            <h2 class="text-2xl md:text-3xl font-bold text-indigo-300 font-twilight" id="room-title">Loading...</h2>
+                            <span class="text-xs font-code text-slate-500 border border-slate-800 px-2 py-1 rounded">Ln 1, Col 1</span>
+                        </div>
+                        
+                        <div class="h-[220px] overflow-y-auto pr-2 custom-scrollbar">
+                            <div class="font-code text-slate-300 text-base leading-relaxed space-y-4">
+                                <p class="text-emerald-500/50 text-xs italic">// TODO: Solve the following logic puzzle to compile</p>
+                                <p class="typing-cursor" id="room-story">Initializing prompt...</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Source Attribution -->
+                        <div class="flex gap-2 text-xs text-slate-600 items-center mt-2 pt-2 border-t border-slate-800/50" id="attribution">
+                            <!-- Links injected by JS -->
+                        </div>
+                    </div>
+                    
+                    <!-- Interaction -->
+                    <div class="space-y-4 bg-indigo-950/20 p-4 rounded border border-indigo-500/10 backdrop-blur-sm">
+                        <!-- Hint System -->
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-[10px] text-indigo-400 uppercase font-code">&gt; User Input Required</span>
+                            <button class="text-xs text-purple-400 hover:text-purple-300 flex items-center gap-1 transition-colors" id="hint-btn">
+                                <span class="material-symbols-outlined text-[14px]">smart_toy</span>
+                                <span id="hint-text">Ask AI Assistant (3)</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Feedback Area -->
+                        <div class="h-6 text-xs font-code font-bold text-center text-red-500 opacity-0 transition-opacity" id="feedback"></div>
+                        
+                        <!-- Input Area -->
+                        <div class="relative group" id="input-container">
+                            <span class="absolute left-3 top-3.5 text-slate-500 font-code">&gt;&gt;&gt;</span>
+                            <input autocomplete="off" class="w-full bg-slate-900/80 text-indigo-200 border border-slate-700 rounded p-3 pl-12 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 transition-all font-code text-lg placeholder-slate-700 shadow-inner" id="player-input" placeholder="enter_solution();" type="text">
+                            <button class="absolute right-1 top-1 bottom-1 bg-slate-800 hover:bg-indigo-900 text-indigo-400 px-4 rounded border border-slate-700 hover:border-indigo-500 transition-colors" id="submit-btn">
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- GAME OVER SCREEN -->
+        <div class="hidden text-center space-y-8 animate-fade-in max-w-lg" id="game-over-screen">
+            <div class="relative">
+                <span class="material-symbols-outlined text-9xl text-red-900/20 absolute inset-0 m-auto animate-ping">error</span>
+                <span class="material-symbols-outlined text-9xl text-red-600 relative z-10">memory</span>
+            </div>
+            
+            <div class="space-y-2">
+                <h2 class="text-5xl font-bold text-red-600 font-twilight text-shadow-moon">RUNTIME ERROR</h2>
+                <p class="text-xl text-slate-400 font-code">Stack Overflow. You ran out of time.</p>
+            </div>
+            
+            <div class="bg-slate-900/80 p-6 rounded-lg border border-red-900/50 backdrop-blur box-shadow-twilight">
+                <div class="flex justify-between text-slate-400 mb-2 font-code">
+                    <span>Modules Compiled:</span>
+                    <span class="text-white font-bold" id="go-rooms">0/10</span>
+                </div>
+                <div class="flex justify-between text-slate-400 font-code">
+                    <span>Final XP:</span>
+                    <span class="text-red-500 font-bold text-xl" id="go-score">0</span>
+                </div>
+            </div>
+            
+            <button class="w-full bg-slate-200 text-slate-900 font-bold py-3 px-8 rounded hover:bg-white transition-colors uppercase tracking-widest flex items-center justify-center gap-2 font-twilight" id="restart-btn">
+                <span class="material-symbols-outlined">restart_alt</span>
+                Reboot System
+            </button>
+        </div>
+        
+        <!-- VICTORY SCREEN -->
+        <div class="hidden text-center space-y-8 animate-fade-in max-w-lg" id="victory-screen">
+            <div class="relative">
+                <div class="absolute inset-0 bg-emerald-500/20 blur-3xl rounded-full"></div>
+                <span class="material-symbols-outlined text-9xl text-emerald-400 relative z-10 animate-bounce">rocket_launch</span>
+            </div>
+            
+            <div class="space-y-2">
+                <h2 class="text-5xl font-bold text-white font-twilight text-shadow-moon">DEPLOYED!</h2>
+                <p class="text-xl text-slate-300 font-code">Production build successful. Vibes immaculate.</p>
+            </div>
+            
+            <div class="bg-slate-900/80 p-6 rounded-lg border border-emerald-500 shadow-[0_0_30px_rgba(16,185,129,0.2)] backdrop-blur">
+                <p class="text-slate-400 text-xs uppercase tracking-widest mb-2 font-code">Total Experience Points</p>
+                <p class="text-6xl font-bold text-emerald-400 font-code text-shadow-moon" id="vic-score">0</p>
+                <div class="mt-4 text-xs text-slate-500 font-code border-t border-slate-700 pt-2">
+                    Rank: <span class="text-white font-bold" id="vic-rank">Vibe Coder</span> | Diff: <span id="vic-diff">Normal</span>
+                </div>
+            </div>
+            
+            <button class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-3 px-8 rounded hover:from-indigo-500 hover:to-purple-500 transition-colors uppercase tracking-widest shadow-lg w-full flex items-center justify-center gap-2 font-twilight" id="new-project-btn">
+                <span class="material-symbols-outlined">code</span>
+                Start New Project
+            </button>
+        </div>
+    </div>
+    
+    <!-- Footer Bar -->
+    <div class="fixed bottom-0 left-0 w-full bg-slate-950/90 border-t border-slate-800 p-3 z-50 backdrop-blur-md" id="download-bar">
+        <div class="max-w-5xl mx-auto flex flex-col gap-3">
+            <!-- Top row with priority buttons -->
+            <div class="flex justify-center gap-3">
+                <a class="text-sm bg-orange-900/20 hover:bg-orange-900/40 text-orange-400 px-3 py-2 rounded border border-orange-800/40 transition-colors flex items-center gap-2" href="https://gitlab.com/ryzenadvanced/ultimate-custom-engineered-coding-agents-trae-ai-glm-4-6-vibe-coding-lab/-/blob/master/README.md#" target="_blank">
+                    <span class="material-symbols-outlined">article</span>
+                    Creator's GitLab Blog
+                </a>
+                
+                <a class="text-sm bg-blue-900/20 hover:bg-blue-900/40 text-blue-400 px-3 py-2 rounded border border-blue-800/40 transition-colors flex items-center gap-2" href="https://z.ai/subscribe?ic=R0K78RJKNW" target="_blank">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    Made using GLM 4.6
+                </a>
+            </div>
+            
+            <!-- Bottom row with smaller utility buttons -->
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                    <span class="text-xs text-slate-400 font-code">QuestRoom: Vibe Edition v2.2.0</span>
+                </div>
+                
+                <div class="flex gap-2">
+                    <button class="text-xs bg-slate-800 hover:bg-slate-700 text-white px-2 py-1 rounded border border-slate-600 transition-colors flex items-center gap-1" id="home-btn">
+                        <span class="material-symbols-outlined text-xs">home</span>
+                        Home
+                    </button>
+                    
+                    <a class="text-xs bg-slate-800 hover:bg-slate-700 text-cyan-400 px-2 py-1 rounded border border-slate-600 transition-colors flex items-center gap-1" href="https://www.trae.ai" target="_blank">
+                        <span class="material-symbols-outlined text-xs">link</span>
+                        TRAE.AI
+                    </a>
+                    
+                    <button class="text-xs bg-slate-800 hover:bg-slate-700 text-white px-2 py-1 rounded border border-slate-600 transition-colors flex items-center gap-1" id="save-btn">
+                        <span class="material-symbols-outlined text-xs">save</span>
+                        Save
+                    </button>
+                    
+                    <button class="text-xs bg-purple-900/30 hover:bg-purple-900/50 text-purple-200 px-2 py-1 rounded border border-purple-800/50 transition-colors flex items-center gap-1" id="install-btn">
+                        <span class="material-symbols-outlined text-xs">download</span>
+                        Install
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Scripts (Tone.js) -->
+    <script src="https://artifacts-cdn.chatglm.site/https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    
+    <script>
+        // Game Data: Vibe Coding Theme
+        const ROOMS = [
+            {
+                id: 1,
+                title: "The Blank Canvas",
+                story: "You open your IDE. The cursor blinks in void. To create, you must speak to the machine. I am the whisper that builds worlds, sentence that becomes software. Be specific, or I shall build a monster.\n\nWhat am I?",
+                image: "https://picsum.photos/seed/cursor/800/600.jpg",
+                answer: ["prompt", "prompts"],
+                hint: "I am the text you type into AI to make it do work.",
+                source: "Trae.ai Features",
+                sourceUrl: "https://www.trae.ai"
+            },
+            {
+                id: 2,
+                title: "The Ghost in Machine",
+                story: "The code looks perfect. The syntax is clean. Yet, nothing works. I hide in plain sight, a misplaced character, a logic flaw. I am the reason you don't sleep.\n\nWhat am I?",
+                image: "https://picsum.photos/seed/bug/800/600.jpg",
+                answer: ["bug", "error", "defect"],
+                hint: "I am a mistake in code. You squash me.",
+                source: "Programming Humor",
+                sourceUrl: "https://apidog.com/blog/what-is-vibe-coding/"
+            },
+            {
+                id: 3,
+                title: "The Hallucination",
+                story: "The AI speaks with absolute confidence. It invents a library that does not exist. It writes a function that defies logic. It is dreaming while you are working.\n\nWhat is this phenomenon?",
+                image: "https://picsum.photos/seed/hallucination/800/600.jpg",
+                answer: ["hallucination", "hallucinating", "lying", "lie"],
+                hint: "When an LLM makes things up that aren't true.",
+                source: "AI Limitations",
+                sourceUrl: "https://www.trae.ai"
+            },
+            {
+                id: 4,
+                title: "The SOLO Agent",
+                story: "You step away from the keyboard. The machine continues to work. It plans, it edits files, it runs terminal commands. It is not just a chat; it is an autonomous worker in Trae.\n\nWhat is this mode called?",
+                image: "https://picsum.photos/seed/agent/800/600.jpg",
+                answer: ["solo", "agent", "auto"],
+                hint: "The mode in Trae where the AI works by itself. __ mode.",
+                source: "Trae SOLO Mode",
+                sourceUrl: "https://www.trae.ai"
+            },
+            {
+                id: 5,
+                title: "The Infinite Cycle",
+                story: "Round and round I go. I have a start, but I never found my end. The CPU heats up, browser freezes. I am the snake eating its own tail.\n\nWhat am I?",
+                image: "https://picsum.photos/seed/loop/800/600.jpg",
+                answer: ["loop", "infinite loop", "while"],
+                hint: "A block of code that repeats forever.",
+                source: "Coding Basics",
+                sourceUrl: "https://docs.trae.ai/"
+            },
+            {
+                id: 6,
+                title: "The Short Memory",
+                story: "We spoke 5 minutes ago, but now the AI has forgotten the variable name. The conversation was too long, and the earlier words fell off the edge of the cliff.\n\nWhat ran out?",
+                image: "https://picsum.photos/seed/memory/800/600.jpg",
+                answer: ["context", "context window", "memory", "token limit"],
+                hint: "The limit of how much text the AI can remember at once.",
+                source: "LLM Mechanics",
+                sourceUrl: "https://www.kdnuggets.com/trae-adaptive-ai-code-editor"
+            },
+            {
+                id: 7,
+                title: "The Works on My Machine",
+                story: "It runs perfectly in the IDE. You push it to the world, and it crashes instantly. The environment is different. The final hurdle.\n\nWhere are you trying to go?",
+                image: "https://picsum.photos/seed/production/800/600.jpg",
+                answer: ["production", "deploy", "deployment", "prod"],
+                hint: "The live environment where users see your app.",
+                source: "DevOps Memes",
+                sourceUrl: "https://fonzi.ai/blog/vibe-coding-memes"
+            },
+            {
+                id: 8,
+                title: "The Deep Thinker",
+                story: "Beneath the hood of the vibe, there is a powerful engine. A model known for reasoning, sometimes taking a moment to 'think' before it answers. It powers the new wave of coding.\n\nName the whale (or model).",
+                image: "https://picsum.photos/seed/deepseek/800/600.jpg",
+                answer: ["deepseek", "r1", "deep seek"],
+                hint: "The AI model integrated into Trae (besides Claude/GPT). Sounds like searching the ocean.",
+                source: "Trae Integrations",
+                sourceUrl: "https://skywork.ai/blog/trae-ai-ide-review-2025-cursor-alternative/"
+            },
+            {
+                id: 9,
+                title: "The Merge Conflict",
+                story: "Two timelines collide. You changed line 40. The AI changed line 40. Now the file bleeds with '<<<<<<< HEAD'. A decision must be made.\n\nWhat is this battle called?",
+                image: "https://picsum.photos/seed/conflict/800/600.jpg",
+                answer: ["conflict", "merge conflict", "merge"],
+                hint: "When Git can't automatically combine changes.",
+                source: "Git Documentation",
+                sourceUrl: "https://docs.trae.ai/"
+            },
+            {
+                id: 10,
+                title: "The Vibe",
+                story: "You aren't typing code. You aren't debugging syntax. You are simply guiding the energy, bobbing your head to music, and letting the app build itself. You have reached the ultimate state.\n\nWhat is this?",
+                image: "https://picsum.photos/seed/vibe/800/600.jpg",
+                answer: ["flow", "vibe", "vibe coding", "vibing"],
+                hint: "The name of this game. The meme of 2025.",
+                source: "Andrej Karpathy",
+                sourceUrl: "https://twitter.com/karpathy"
+            }
+        ];
+
+        // Game Engine
+        const Game = {
+            state: {
+                currentRoomIndex: 0,
+                score: 0,
+                difficulty: 1, 
+                timeLeft: 0,
+                timerInterval: null,
+                hintsLeft: 3,
+                sessionBest: 0
+            },
+
+            elements: {
+                // Screens
+                menuScreen: document.getElementById('menu-screen'),
+                gameScreen: document.getElementById('game-screen'),
+                gameOverScreen: document.getElementById('game-over-screen'),
+                victoryScreen: document.getElementById('victory-screen'),
+                
+                // UI Elements
+                roomTitle: document.getElementById('room-title'),
+                roomStory: document.getElementById('room-story'),
+                roomImage: document.getElementById('room-image'),
+                roomNumber: document.getElementById('room-number'),
+                timer: document.getElementById('timer'),
+                score: document.getElementById('score'),
+                playerInput: document.getElementById('player-input'),
+                feedback: document.getElementById('feedback'),
+                hintBtn: document.getElementById('hint-btn'),
+                hintText: document.getElementById('hint-text'),
+                attribution: document.getElementById('attribution'),
+                startBtn: document.getElementById('start-btn'),
+                submitBtn: document.getElementById('submit-btn'),
+                restartBtn: document.getElementById('restart-btn'),
+                newProjectBtn: document.getElementById('new-project-btn'),
+                homeBtn: document.getElementById('home-btn'),
+                saveBtn: document.getElementById('save-btn'),
+                installBtn: document.getElementById('install-btn'),
+                sessionBestContainer: document.getElementById('session-best-container'),
+                sessionBestScore: document.getElementById('session-best-score'),
+                goRooms: document.getElementById('go-rooms'),
+                goScore: document.getElementById('go-score'),
+                vicScore: document.getElementById('vic-score'),
+                vicRank: document.getElementById('vic-rank'),
+                vicDiff: document.getElementById('vic-diff')
+            },
+
+            init() {
+                // Initialize event listeners
+                this.initEventListeners();
+                
+                // Load session best from localStorage
+                this.state.sessionBest = parseInt(localStorage.getItem('vibeCodingSessionBest') || '0');
+                this.updateSessionBestDisplay();
+            },
+
+            initEventListeners() {
+                // Difficulty selection
+                document.querySelectorAll('.diff-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        this.setDifficulty(parseInt(btn.dataset.difficulty));
+                    });
+                });
+
+                // Game controls
+                this.elements.startBtn.addEventListener('click', () => this.start());
+                this.elements.submitBtn.addEventListener('click', () => this.submitAnswer());
+                this.elements.playerInput.addEventListener('keyup', (e) => {
+                    if (e.key === 'Enter') this.submitAnswer();
+                });
+                this.elements.hintBtn.addEventListener('click', () => this.showHint());
+                this.elements.restartBtn.addEventListener('click', () => this.reset());
+                this.elements.newProjectBtn.addEventListener('click', () => this.reset());
+                this.elements.homeBtn.addEventListener('click', () => this.reset());
+                this.elements.saveBtn.addEventListener('click', () => this.download());
+                this.elements.installBtn.addEventListener('click', () => this.installPWA());
+            },
+
+            setDifficulty(level) {
+                this.state.difficulty = level;
+                
+                // Update UI selection
+                document.querySelectorAll('.diff-btn').forEach(btn => {
+                    const btnLevel = parseInt(btn.dataset.difficulty);
+                    if (btnLevel === level) {
+                        btn.classList.add('border-white', 'bg-slate-800');
+                        btn.classList.remove('border-slate-700/50', 'bg-slate-900/40');
+                    } else {
+                        btn.classList.remove('border-white', 'bg-slate-800');
+                        btn.classList.add('border-slate-700/50', 'bg-slate-900/40');
+                    }
+                });
+                
+                // Enable start button
+                this.elements.startBtn.disabled = false;
+                this.elements.startBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                
+                // Animate start button
+                this.elements.startBtn.classList.add('animate-pulse');
+                setTimeout(() => this.elements.startBtn.classList.remove('animate-pulse'), 1000);
+            },
+
+            start() {
+                // Start audio context
+                Tone.start(); 
+                
+                // Config based on difficulty
+                let timeMinutes = 15;
+                let hints = 999;
+                
+                switch(this.state.difficulty) {
+                    case 2: timeMinutes = 10; hints = 5; break;
+                    case 3: timeMinutes = 7; hints = 3; break;
+                    case 4: timeMinutes = 5; hints = 0; break;
+                    case 5: timeMinutes = 3; hints = 0; break; // Vibe God
+                }
+
+                this.state.timeLeft = timeMinutes * 60;
+                this.state.hintsLeft = hints;
+                this.state.currentRoomIndex = 0;
+                this.state.score = 0;
+
+                this.showScreen('game');
+                this.startTimer();
+                this.loadRoom(0);
+                this.updateHUD();
+                this.playSound('start');
+            },
+
+            loadRoom(index) {
+                const room = ROOMS[index];
+                
+                // Transition effect
+                this.elements.roomImage.style.opacity = '0.5';
+                this.elements.roomImage.style.filter = 'blur(10px)';
+                
+                setTimeout(() => {
+                    this.elements.roomImage.src = room.image;
+                    this.elements.roomImage.onload = () => {
+                        this.elements.roomImage.style.opacity = '0.9';
+                        this.elements.roomImage.style.filter = 'blur(0px)';
+                    };
+                }, 300);
+
+                this.elements.roomTitle.textContent = room.title;
+                
+                // Typewriter effect for story
+                this.elements.roomStory.innerHTML = '';
+                let i = 0;
+                const speed = 20; 
+                const text = room.story;
+                
+                const typeWriter = () => {
+                    if (i < text.length) {
+                        this.elements.roomStory.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    } else {
+                        this.elements.roomStory.innerHTML = this.elements.roomStory.textContent.replace(/\n/g, '<br>');
+                    }
+                };
+                typeWriter();
+
+                this.elements.roomNumber.textContent = index + 1;
+                this.elements.playerInput.value = '';
+                this.elements.feedback.style.opacity = '0';
+                
+                // Handle Vibe God Mode (Blind)
+                if (this.state.difficulty === 5) {
+                    this.elements.playerInput.type = "password";
+                    this.elements.playerInput.placeholder = "********";
+                } else {
+                    this.elements.playerInput.type = "text";
+                    this.elements.playerInput.placeholder = "enter_solution();";
+                }
+
+                this.updateHintUI();
+
+                // Attribution
+                this.elements.attribution.innerHTML = `
+                    <span class="material-symbols-outlined text-[14px]">link</span>
+                    <a href="${room.sourceUrl}" target="_blank" class="hover:text-indigo-400 border-b border-transparent hover:border-indigo-400 transition-colors">Reference: ${room.source}</a>
+                `;
+            },
+
+            submitAnswer() {
+                const rawInput = this.elements.playerInput.value.trim().toLowerCase();
+                if (!rawInput) return;
+
+                const room = ROOMS[this.state.currentRoomIndex];
+                const isCorrect = room.answer.some(ans => rawInput.includes(ans));
+
+                if (isCorrect) {
+                    this.handleCorrect();
+                } else {
+                    this.handleIncorrect();
+                }
+            },
+
+            handleCorrect() {
+                this.playSound('correct');
+                
+                const bonus = Math.floor(this.state.timeLeft / 10);
+                const points = (100 + bonus) * this.state.difficulty;
+                this.state.score += points;
+
+                this.elements.feedback.textContent = "> COMPILATION SUCCESSFUL";
+                this.elements.feedback.className = "h-6 text-xs font-code font-bold text-center text-emerald-400 transition-opacity";
+                this.elements.feedback.style.opacity = '1';
+
+                this.state.currentRoomIndex++;
+
+                if (this.state.currentRoomIndex >= ROOMS.length) {
+                    this.victory();
+                } else {
+                    setTimeout(() => {
+                        this.loadRoom(this.state.currentRoomIndex);
+                        this.updateHUD();
+                    }, 1200);
+                }
+            },
+
+            handleIncorrect() {
+                this.playSound('wrong');
+                this.elements.feedback.textContent = "> SYNTAX ERROR: TRY AGAIN";
+                this.elements.feedback.className = "h-6 text-xs font-code font-bold text-center text-red-500 transition-opacity";
+                this.elements.feedback.style.opacity = '1';
+                
+                // Penalty
+                this.state.timeLeft = Math.max(0, this.state.timeLeft - 20); 
+                this.updateHUD();
+                
+                this.elements.playerInput.classList.add('animate-pulse', 'border-red-600');
+                setTimeout(() => this.elements.playerInput.classList.remove('animate-pulse', 'border-red-600'), 500);
+            },
+
+            showHint() {
+                if (this.state.hintsLeft > 0) {
+                    this.state.hintsLeft--;
+                    const room = ROOMS[this.state.currentRoomIndex];
+                    alert(`AI ASSISTANT: ${room.hint}`);
+                    this.updateHintUI();
+                } else {
+                    alert("Quota Exceeded. Please upgrade plan.");
+                }
+            },
+
+            updateHintUI() {
+                if (this.state.difficulty >= 4) {
+                    this.elements.hintBtn.classList.add('hidden');
+                } else {
+                    this.elements.hintBtn.classList.remove('hidden');
+                    this.elements.hintText.textContent = this.state.hintsLeft > 10 ? "Ask AI" : `Ask AI (${this.state.hintsLeft})`;
+                    if (this.state.hintsLeft === 0) {
+                        this.elements.hintBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                    }
+                }
+            },
+
+            startTimer() {
+                if (this.state.timerInterval) clearInterval(this.state.timerInterval);
+                this.state.timerInterval = setInterval(() => {
+                    this.state.timeLeft--;
+                    this.updateHUD();
+                    if (this.state.timeLeft <= 0) {
+                        this.gameOver();
+                    }
+                }, 1000);
+            },
+
+            updateHUD() {
+                const mins = Math.floor(this.state.timeLeft / 60);
+                const secs = this.state.timeLeft % 60;
+                this.elements.timer.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+                this.elements.score.textContent = this.state.score;
+                
+                if (this.state.timeLeft < 30) {
+                    this.elements.timer.classList.add('text-red-500', 'animate-pulse');
+                } else {
+                    this.elements.timer.classList.remove('text-red-500', 'animate-pulse');
+                }
+            },
+
+            gameOver() {
+                clearInterval(this.state.timerInterval);
+                this.playSound('gameover');
+                this.elements.goScore.textContent = this.state.score;
+                this.elements.goRooms.textContent = `${this.state.currentRoomIndex}/10`;
+                this.showScreen('gameover');
+            },
+
+            victory() {
+                clearInterval(this.state.timerInterval);
+                this.playSound('victory');
+                
+                if (this.state.score > this.state.sessionBest) {
+                    this.state.sessionBest = this.state.score;
+                    localStorage.setItem('vibeCodingSessionBest', this.state.sessionBest.toString());
+                    this.updateSessionBestDisplay();
+                }
+
+                this.elements.vicScore.textContent = this.state.score;
+                const diffNames = ["Intern", "Junior", "Senior", "10x Dev", "Vibe God"];
+                const diffName = diffNames[this.state.difficulty - 1];
+                this.elements.vicDiff.textContent = diffName;
+                this.elements.vicRank.textContent = this.state.difficulty === 5 ? "THE TRAEA.AI ARCHITECT" : "Vibe Coder";
+                
+                this.showScreen('victory');
+            },
+
+            reset() {
+                this.showScreen('menu');
+                this.state.currentRoomIndex = 0;
+            },
+
+            showScreen(screen) {
+                // Hide all screens
+                this.elements.menuScreen.classList.add('hidden');
+                this.elements.gameScreen.classList.add('hidden');
+                this.elements.gameOverScreen.classList.add('hidden');
+                this.elements.victoryScreen.classList.add('hidden');
+                
+                // Show selected screen
+                switch(screen) {
+                    case 'menu':
+                        this.elements.menuScreen.classList.remove('hidden');
+                        break;
+                    case 'game':
+                        this.elements.gameScreen.classList.remove('hidden');
+                        break;
+                    case 'gameover':
+                        this.elements.gameOverScreen.classList.remove('hidden');
+                        break;
+                    case 'victory':
+                        this.elements.victoryScreen.classList.remove('hidden');
+                        break;
+                }
+            },
+
+            updateSessionBestDisplay() {
+                if (this.state.sessionBest > 0) {
+                    this.elements.sessionBestContainer.classList.remove('hidden');
+                    this.elements.sessionBestScore.textContent = `${this.state.sessionBest} XP`;
+                } else {
+                    this.elements.sessionBestContainer.classList.add('hidden');
+                }
+            },
+
+            playSound(type) {
+                try {
+                    const synth = new Tone.Synth().toDestination();
+                    const now = Tone.now();
+                    
+                    // Lofi / Digital Sounds with a slightly moodier tone for Twilight theme
+                    switch (type) {
+                        case 'start':
+                            // Deep, resonant start
+                            const osc = new Tone.PolySynth(Tone.Synth).toDestination();
+                            osc.triggerAttackRelease(["C3", "G3", "C4"], "4n");
+                            break;
+                        case 'correct':
+                            // Mystical chime
+                            const poly = new Tone.PolySynth(Tone.Synth).toDestination();
+                            poly.triggerAttackRelease(["A4", "C5", "E5"], "8n");
+                            break;
+                        case 'wrong':
+                            // Low error
+                            const membrane = new Tone.MembraneSynth().toDestination();
+                            membrane.triggerAttackRelease("A1", "8n");
+                            break;
+                        case 'victory':
+                            // Epic chord
+                            const vSynth = new Tone.PolySynth(Tone.Synth).toDestination();
+                            vSynth.triggerAttackRelease(["C4", "E4", "G4", "C5", "G5"], "1n");
+                            break;
+                        case 'gameover':
+                            // Fade out
+                            const noise = new Tone.NoiseSynth().toDestination();
+                            noise.triggerAttackRelease("2n");
+                            break;
+                    }
+                } catch(e) {
+                    console.log("Audio requires interaction first");
+                }
+            },
+
+            download() {
+                const htmlContent = document.documentElement.outerHTML;
+                const blob = new Blob([htmlContent], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'VibeCoding_Saga.html';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            },
+
+            installPWA() {
+                if ('serviceWorker' in navigator) {
+                    alert('To install this app:\n1. On Chrome/Edge: Click the install icon in the address bar\n2. On Safari: Tap Share > Add to Home Screen\n3. On Firefox: Use the "Add to Home Screen" option in the menu');
+                } else {
+                    alert('Your browser does not support installing web apps. Please try a modern browser like Chrome, Firefox, or Safari.');
+                }
+            }
+        };
+
+        // Initialize game
+        document.addEventListener('DOMContentLoaded', () => {
+            Game.init();
+        });
+    </script>
+
+
+			
+		
+</body></html>

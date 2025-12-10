@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>OFFLOGIC: 98 EDITION</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Retro Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=VT323&amp;display=swap" rel="stylesheet">
+<!-- Tone.js for 8-bit Audio -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+<!-- Zip Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'arcade': ['"Press Start 2P"', 'cursive'],
+                        'terminal': ['"VT323"', 'monospace'],
+                        'win95': ['"Segoe UI"', 'sans-serif'],
+                    },
+                    colors: {
+                        'retro-black': '#050505',
+                        'retro-green': '#33ff00',
+                        'retro-green-dim': '#1a8000',
+                        'retro-amber': '#ffb000',
+                        'retro-red': '#ff0000',
+                        'retro-gray': '#555555',
+                        'retro-white': '#e0e0e0',
+                        'win-gray': '#c0c0c0',
+                        'win-dark': '#808080',
+                        'win-black': '#000000',
+                    },
+                    animation: {
+                        'blink': 'blink 1s step-end infinite',
+                        'turn-on': 'turn-on 0.2s cubic-bezier(0.23, 1, 0.32, 1) forwards',
+                        'pulse-fast': 'pulse 0.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        blink: { '0%, 100%': { opacity: '1' }, '50%': { opacity: '0' } },
+                        'turn-on': {
+                            '0%': { transform: 'scale(1, 0.002)', opacity: '0', filter: 'brightness(3)' },
+                            '50%': { transform: 'scale(1, 0.002)', opacity: '1' },
+                            '100%': { transform: 'scale(1, 1)', filter: 'brightness(1)' }
+                        }
+                    },
+                    boxShadow: {
+                        'win-out': 'inset 1px 1px #dfdfdf, inset -1px -1px #000000, inset 2px 2px #ffffff, inset -2px -2px #808080',
+                        'win-in': 'inset 1px 1px #000000, inset -1px -1px #dfdfdf, inset 2px 2px #808080, inset -2px -2px #ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #111;
+            overflow-x: hidden;
+            image-rendering: pixelated;
+        }
+
+        /* Monitor Styles */
+        .monitor-case {
+            background: #222;
+            border-radius: 2rem;
+            box-shadow: 
+                inset 0 0 0 10px #111,
+                0 0 0 5px #333,
+                0 20px 50px rgba(0,0,0,0.8);
+        }
+
+        .screen-glass {
+            background: #000;
+            border-radius: 2rem; 
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 60px rgba(0,0,0,0.7);
+        }
+
+        /* Authentic Scanlines */
+        .scanlines {
+            background: linear-gradient(
+                rgba(18, 16, 16, 0) 50%, 
+                rgba(0, 0, 0, 0.25) 50%
+            ), linear-gradient(
+                90deg, 
+                rgba(255, 0, 0, 0.06), 
+                rgba(0, 255, 0, 0.02), 
+                rgba(0, 0, 255, 0.06)
+            );
+            background-size: 100% 3px, 3px 100%;
+            position: absolute; inset: 0; pointer-events: none; z-index: 50;
+        }
+
+        /* CRT Flicker & Glow */
+        .crt-glow { text-shadow: 0 0 5px currentColor; }
+        .flicker { animation: flicker 0.005s infinite alternate; }
+        @keyframes flicker {
+            0% { opacity: 0.95; }
+            100% { opacity: 1; }
+        }
+
+        /* Retro UI Components */
+        .btn-retro {
+            background: #000;
+            border: 2px solid #33ff00;
+            color: #33ff00;
+            font-family: 'VT323', monospace;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            transition: all 0.1s;
+            box-shadow: 4px 4px 0 #1a8000;
+        }
+        .btn-retro:hover {
+            background: #33ff00;
+            color: #000;
+            box-shadow: 2px 2px 0 #1a8000;
+            transform: translate(2px, 2px);
+        }
+        .btn-retro:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0 0 0;
+        }
+
+        /* Difficulty Selector Items */
+        .diff-item {
+            cursor: pointer;
+            padding: 4px 12px;
+            border: 1px solid transparent;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.8rem;
+            color: #555;
+            transition: all 0.2s;
+            text-align: left;
+            position: relative;
+        }
+        .diff-item:hover, .diff-item.active {
+            color: #33ff00;
+            border-left: 4px solid #33ff00;
+            background: rgba(51, 255, 0, 0.1);
+            padding-left: 20px;
+        }
+        .diff-item.active::after {
+            content: '<';
+            position: absolute;
+            right: 10px;
+            animation: blink 0.5s step-end infinite;
+        }
+
+        /* In-Game Button Styles */
+        .btn-action {
+            font-family: 'Press Start 2P', cursive;
+            border: 4px solid #555;
+            border-top-color: #eee;
+            border-left-color: #eee;
+            background: #ccc;
+            color: #000;
+            box-shadow: 4px 4px 0 #000;
+        }
+        .btn-action:active {
+            border-color: #555;
+            border-bottom-color: #eee;
+            border-right-color: #eee;
+            transform: translate(4px, 4px);
+            box-shadow: none;
+        }
+        .btn-action.red { background: #d00; color: #fff; border-color: #900; border-top-color: #f55; border-left-color: #f55; }
+        .btn-action.green { background: #0b0; color: #fff; border-color: #060; border-top-color: #5f5; border-left-color: #5f5; }
+
+        .led {
+            width: 8px; height: 8px; border-radius: 50%;
+            background-color: #300;
+            box-shadow: inset 1px 1px 2px rgba(0,0,0,0.5);
+            transition: background-color 0.2s;
+        }
+        .led.on { background-color: #f00; box-shadow: 0 0 5px #f00; }
+        
+        /* New Record Animation */
+        .new-record-flash {
+            animation: recordFlash 0.5s ease-in-out infinite alternate;
+        }
+        @keyframes recordFlash {
+            from { color: #ffff00; text-shadow: 0 0 10px #ff0000; }
+            to { color: #ff0000; text-shadow: 0 0 20px #ffff00; }
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-right-12{right:-3rem}.-top-8{top:-2rem}.left-0{left:0px}.left-1\/2{left:50%}.left-8{left:2rem}.top-0{top:0px}.top-2{top:0.5rem}.top-3{top:0.75rem}.z-10{z-index:10}.z-20{z-index:20}.z-40{z-index:40}.z-50{z-index:50}.my-2{margin-top:0.5rem;margin-bottom:0.5rem}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.mr-2{margin-right:0.5rem}.mt-1{margin-top:0.25rem}.mt-12{margin-top:3rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.hidden{display:none}.aspect-\[4\/3\]{aspect-ratio:4/3}.h-40{height:10rem}.h-48{height:12rem}.h-8{height:2rem}.h-full{height:100%}.h-px{height:1px}.min-h-\[120px\]{min-height:120px}.min-h-screen{min-height:100vh}.w-8{width:2rem}.w-full{width:100%}.w-screen{width:100vw}.max-w-5xl{max-width:64rem}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-12{--tw-rotate:12deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes blink{0%, 100%{opacity:1}50%{opacity:0}}.animate-blink{animation:blink 1s step-end infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}@keyframes turn-on{0%{transform:scale(1, 0.002);opacity:0;filter:brightness(3)}50%{transform:scale(1, 0.002);opacity:1}100%{transform:scale(1, 1);filter:brightness(1)}}.animate-turn-on{animation:turn-on 0.2s cubic-bezier(0.23, 1, 0.32, 1) forwards}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-start{justify-content:flex-start}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.whitespace-pre-wrap{white-space:pre-wrap}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l-4{border-left-width:4px}.border-r-4{border-right-width:4px}.border-t{border-top-width:1px}.border-none{border-style:none}.border-\[\#111\]{--tw-border-opacity:1;border-color:rgb(17 17 17 / var(--tw-border-opacity, 1))}.border-\[\#333\]{--tw-border-opacity:1;border-color:rgb(51 51 51 / var(--tw-border-opacity, 1))}.border-black{--tw-border-opacity:1;border-color:rgb(0 0 0 / var(--tw-border-opacity, 1))}.border-retro-gray{--tw-border-opacity:1;border-color:rgb(85 85 85 / var(--tw-border-opacity, 1))}.border-retro-gray\/30{border-color:rgb(85 85 85 / 0.3)}.border-retro-green{--tw-border-opacity:1;border-color:rgb(51 255 0 / var(--tw-border-opacity, 1))}.border-retro-green\/30{border-color:rgb(51 255 0 / 0.3)}.border-yellow-400{--tw-border-opacity:1;border-color:rgb(250 204 21 / var(--tw-border-opacity, 1))}.bg-\[\#051105\]{--tw-bg-opacity:1;background-color:rgb(5 17 5 / var(--tw-bg-opacity, 1))}.bg-\[\#0a0a0a\]{--tw-bg-opacity:1;background-color:rgb(10 10 10 / var(--tw-bg-opacity, 1))}.bg-\[\#111\]{--tw-bg-opacity:1;background-color:rgb(17 17 17 / var(--tw-bg-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-retro-gray{--tw-bg-opacity:1;background-color:rgb(85 85 85 / var(--tw-bg-opacity, 1))}.bg-retro-gray\/30{background-color:rgb(85 85 85 / 0.3)}.bg-retro-green{--tw-bg-opacity:1;background-color:rgb(51 255 0 / var(--tw-bg-opacity, 1))}.bg-transparent{background-color:transparent}.bg-win-gray{--tw-bg-opacity:1;background-color:rgb(192 192 192 / var(--tw-bg-opacity, 1))}.bg-yellow-200{--tw-bg-opacity:1;background-color:rgb(254 240 138 / var(--tw-bg-opacity, 1))}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-12{padding-bottom:3rem}.pb-2{padding-bottom:0.5rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.text-right{text-align:right}.font-arcade{font-family:"Press Start 2P", cursive}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.font-terminal{font-family:"VT323", monospace}.font-win95{font-family:"Segoe UI", sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.tracking-widest{letter-spacing:0.1em}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-red-900{--tw-text-opacity:1;color:rgb(127 29 29 / var(--tw-text-opacity, 1))}.text-retro-amber{--tw-text-opacity:1;color:rgb(255 176 0 / var(--tw-text-opacity, 1))}.text-retro-gray{--tw-text-opacity:1;color:rgb(85 85 85 / var(--tw-text-opacity, 1))}.text-retro-green{--tw-text-opacity:1;color:rgb(51 255 0 / var(--tw-text-opacity, 1))}.text-retro-red{--tw-text-opacity:1;color:rgb(255 0 0 / var(--tw-text-opacity, 1))}.text-retro-white{--tw-text-opacity:1;color:rgb(224 224 224 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-win-dark{--tw-text-opacity:1;color:rgb(128 128 128 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.decoration-dotted{-webkit-text-decoration-style:dotted;text-decoration-style:dotted}.opacity-0{opacity:0}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-win-out{--tw-shadow:inset 1px 1px #dfdfdf, inset -1px -1px #000000, inset 2px 2px #ffffff, inset -2px -2px #808080;--tw-shadow-colored:inset 1px 1px var(--tw-shadow-color), inset -1px -1px var(--tw-shadow-color), inset 2px 2px var(--tw-shadow-color), inset -2px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-100{transition-duration:100ms}.duration-300{transition-duration:300ms}.duration-75{transition-duration:75ms}.selection\:bg-retro-green *::selection{--tw-bg-opacity:1;background-color:rgb(51 255 0 / var(--tw-bg-opacity, 1))}.selection\:text-black *::selection{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.selection\:bg-retro-green::selection{--tw-bg-opacity:1;background-color:rgb(51 255 0 / var(--tw-bg-opacity, 1))}.selection\:text-black::selection{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.hover\:text-retro-red:hover{--tw-text-opacity:1;color:rgb(255 0 0 / var(--tw-text-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:translate-y-px:active{--tw-translate-y:1px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.active\:bg-win-gray\/90:active{background-color:rgb(192 192 192 / 0.9)}.active\:shadow-win-in:active{--tw-shadow:inset 1px 1px #000000, inset -1px -1px #dfdfdf, inset 2px 2px #808080, inset -2px -2px #ffffff;--tw-shadow-colored:inset 1px 1px var(--tw-shadow-color), inset -1px -1px var(--tw-shadow-color), inset 2px 2px var(--tw-shadow-color), inset -2px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}@media (min-width: 768px){.md\:aspect-video{aspect-ratio:16 / 9}.md\:flex-row{flex-direction:row}.md\:p-12{padding:3rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-7xl{font-size:4.5rem;line-height:1}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-xs{font-size:0.75rem;line-height:1rem}}</style></head>
+<body class="min-h-screen w-screen flex flex-col items-center justify-center p-4 selection:bg-retro-green selection:text-black pb-12">
+<!-- Monitor Housing -->
+<div class="monitor-case w-full max-w-5xl aspect-[4/3] md:aspect-video flex flex-col p-8 relative">
+<!-- Branding Label -->
+<div class="absolute top-3 left-8 flex items-center gap-2">
+<div class="led on" id="power-led"></div>
+<span class="text-gray-500 font-sans text-xs font-bold tracking-widest">HIGHMARK 31-X</span>
+</div>
+<!-- Screen Container -->
+<div class="screen-glass flex-1 relative flex flex-col border-4 border-[#111]">
+<div class="scanlines"></div>
+<!-- CONTENT LAYER -->
+<div class="relative z-10 w-full h-full p-6 flex flex-col text-retro-green font-terminal text-2xl animate-turn-on" id="screen-content">
+<!-- BOOT SEQUENCE -->
+<div class="absolute inset-0 bg-black z-50 flex flex-col justify-start p-8 font-terminal text-retro-green leading-snug hidden" id="boot-screen">
+<div class="whitespace-pre-wrap" id="boot-text">HIMEM is testing extended memory...done.<br>Loading DOS...<br>C:\&gt; CD GAMES\OFFLOGIC<br>C:\GAMES\OFFLOGIC&gt; OFFLOGIC.EXE<br>Initializing graphics adapter...<br>Sound Blaster 16 detected at Port 220...<br></div>
+<div class="mt-2 text-retro-green animate-blink">_</div>
+</div>
+<!-- MAIN MENU -->
+<div class="absolute inset-0 flex flex-col bg-black z-40 p-4 md:p-12" id="menu-screen">
+<div class="text-center mb-6">
+<h1 class="font-arcade text-4xl md:text-5xl text-retro-green mb-2 crt-glow">OFFLOGIC</h1>
+<p class="text-retro-gray text-lg tracking-widest">VER 2.1 [1998]</p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 h-full">
+<!-- Left: Difficulty List -->
+<div class="flex-1 border-2 border-retro-gray p-4 bg-[#0a0a0a] flex flex-col">
+<h3 class="font-terminal text-retro-amber text-xl mb-4 border-b border-retro-gray pb-2">&gt; SELECT DIFFICULTY</h3>
+<ul class="space-y-3 flex-1" id="diff-list">
+<li class="diff-item" data-level="0">1. NOVICE <span class="text-xs ml-2 text-gray-600">[TRAINING]</span></li>
+<li class="diff-item active" data-level="1">2. ARCADE <span class="text-xs ml-2 text-gray-600">[STANDARD]</span></li>
+<li class="diff-item" data-level="2">3. TURBO <span class="text-xs ml-2 text-gray-600">[FAST]</span></li>
+<li class="diff-item" data-level="3">4. HACKER <span class="text-xs ml-2 text-gray-600">[COMPLEX]</span></li>
+<li class="diff-item text-retro-red hover:text-retro-red" data-level="4">5. GLITCH <span class="text-xs ml-2 text-red-900">[UNSTABLE]</span></li>
+</ul>
+<!-- Stats Display in Menu -->
+<div class="mt-4 pt-4 border-t border-retro-gray/30 text-xs font-arcade text-retro-gray">
+<div class="flex justify-between mb-2">
+<span>HI-SCORE:</span>
+<span class="text-retro-green" id="menu-high-score">000000</span>
+</div>
+<div class="flex justify-between">
+<span>BEST STREAK:</span>
+<span class="text-retro-amber" id="menu-best-streak">0</span>
+</div>
+</div>
+</div>
+<!-- Right: Description & Start (UPDATED LAYOUT) -->
+<div class="flex-1 flex flex-col gap-6">
+<div class="border-2 border-retro-green p-4 h-48 bg-[#051105] relative overflow-hidden">
+<div class="absolute top-0 left-0 bg-retro-green text-black text-xs px-2 py-1 font-arcade">INFO</div>
+<p class="mt-6 font-terminal text-xl leading-relaxed text-retro-white" id="diff-desc">STANDARD PROTOCOL.<br><br>The intended experience. Moderate speed increase per level.<br><br>[Base Time: 3.0s]</p>
+</div>
+<button class="btn-retro py-6 w-full animate-pulse border-4" id="btn-menu-start">
+<span class="animate-blink mr-2">&gt;</span> INSERT COIN / START
+                            </button>
+</div>
+</div>
+</div>
+<!-- GAME UI -->
+<div class="hidden flex-col h-full opacity-0 transition-opacity duration-300" id="game-ui">
+<!-- HUD -->
+<div class="flex justify-between items-end border-b-2 border-retro-green/30 pb-2 mb-4 font-arcade text-xs md:text-sm">
+<div>
+<div class="text-retro-gray">SCORE</div>
+<div class="text-retro-green text-lg md:text-xl" id="score-display">000000</div>
+</div>
+<div class="text-center">
+<div class="bg-retro-green text-black px-3 py-1" id="difficulty-badge">ARCADE</div>
+<div class="flex justify-center gap-4 mt-1 text-[10px] md:text-xs">
+<span class="text-retro-gray" id="level-display">STAGE 1</span>
+<span class="text-retro-amber" id="streak-display">STREAK: 0</span>
+</div>
+</div>
+<div>
+<div class="text-retro-gray text-right">LIVES</div>
+<div class="text-retro-red text-lg md:text-xl tracking-widest" id="lives-display">♥♥♥</div>
+</div>
+</div>
+<!-- Main Game Area -->
+<div class="flex-1 flex flex-col items-center justify-center relative">
+<!-- Instructions -->
+<div class="w-full text-center mb-10 min-h-[120px] flex flex-col justify-center">
+<p class="text-retro-amber text-xl md:text-2xl mb-2 font-terminal uppercase tracking-widest" id="instruction-sub"></p>
+<h2 class="font-arcade text-2xl md:text-4xl text-retro-green leading-relaxed crt-glow transition-colors duration-100" id="instruction-main">
+                                READY...
+                            </h2>
+</div>
+<!-- Interaction Zone -->
+<div class="w-full flex justify-center items-center h-40 relative">
+<!-- Action Button -->
+<button class="hidden btn-action px-10 py-6 text-xl md:text-2xl" id="game-btn">PRESS</button>
+<!-- Text Input -->
+<div class="hidden w-full max-w-sm flex-col" id="game-input-wrapper">
+<label class="text-retro-gray text-sm font-arcade mb-2 block">&gt; C:\INPUT_CODE.EXE</label>
+<div class="flex items-center border-2 border-retro-green bg-black p-2">
+<span class="text-retro-green mr-2 animate-blink">&gt;</span>
+<input autocomplete="off" class="w-full bg-transparent border-none text-retro-green font-terminal text-3xl md:text-4xl focus:outline-none uppercase" id="game-input" maxlength="10" spellcheck="false" type="text">
+</div>
+</div>
+</div>
+<!-- Time Bar -->
+<div class="w-full max-w-lg h-8 border-4 border-retro-gray mt-12 p-1 bg-black">
+<div class="h-full bg-retro-green w-full transition-all duration-75 relative overflow-hidden" id="time-bar">
+<!-- Stripe pattern overlay for retro feel -->
+<div class="absolute inset-0" style="background: repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(0,0,0,0.2) 10px,rgba(0,0,0,0.2) 20px);"></div>
+</div>
+</div>
+<!-- Feedback Overlay -->
+<div class="absolute inset-0 pointer-events-none hidden flex items-center justify-center bg-black/80 z-20" id="feedback-flash">
+<span class="font-arcade text-5xl md:text-7xl crt-glow" id="feedback-text"></span>
+</div>
+</div>
+</div>
+<!-- GAME OVER SCREEN -->
+<div class="hidden absolute inset-0 bg-black z-50 flex flex-col items-center justify-center text-center p-8" id="game-over-screen">
+<h2 class="font-arcade text-retro-red text-4xl md:text-5xl mb-6 flicker">SYSTEM FAILURE</h2>
+<!-- New Record Alert -->
+<div class="hidden mb-4 font-arcade text-xl new-record-flash" id="new-record-alert">
+            ★ NEW HIGH SCORE! ★
+        </div>
+<div class="border-2 border-retro-gray bg-[#111] p-6 w-full max-w-md mb-8">
+<div class="flex justify-between font-terminal text-xl mb-2 text-retro-gray">
+<span>ERROR_CODE:</span>
+<span class="text-retro-white text-right uppercase" id="death-reason">TIMEOUT</span>
+</div>
+<div class="h-px bg-retro-gray my-4"></div>
+<!-- Game Stats -->
+<div class="space-y-2">
+<div class="flex justify-between font-arcade text-lg">
+<span class="text-retro-green">SCORE</span>
+<span class="text-white" id="final-score">0000</span>
+</div>
+<div class="flex justify-between font-arcade text-sm text-retro-gray">
+<span>HI-SCORE</span>
+<span class="text-retro-green" id="final-high-score">0000</span>
+</div>
+<div class="h-px bg-retro-gray/30 my-2"></div>
+<div class="flex justify-between font-arcade text-sm text-retro-amber">
+<span>STREAK</span>
+<span id="final-streak">0</span>
+</div>
+<div class="flex justify-between font-arcade text-xs text-retro-gray">
+<span>BEST STREAK</span>
+<span id="final-best-streak">0</span>
+</div>
+</div>
+</div>
+<button class="btn-retro py-3 w-full max-w-md text-lg" id="btn-restart">REBOOT SYSTEM</button>
+</div>
+</div>
+</div>
+</div>
+<!-- CLASSIC 90S DOWNLOAD BUTTON -->
+<div class="mt-8 relative group">
+<!-- Connecting cable visual -->
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 w-8 h-8 border-r-4 border-l-4 border-[#333] bg-[#111]"></div>
+<!-- The Button Box -->
+<div class="bg-win-gray p-1 shadow-win-out border border-black inline-block">
+<button class="relative flex items-center gap-3 px-6 py-2 bg-win-gray active:bg-win-gray/90 shadow-win-out active:shadow-win-in font-win95 text-black text-sm font-bold active:translate-y-px outline-none" id="external-download-btn">
+<span aria-label="Floppy Disk" class="text-2xl" role="img">💾</span>
+<div class="flex flex-col items-start leading-none">
+<span class="text-xs text-win-dark mb-1">C:\GAMES\OFFLOGIC\</span>
+<span class="underline decoration-dotted">DOWNLOAD_SRC.ZIP</span>
+</div>
+</button>
+</div>
+<!-- "Sticker" -->
+<div class="absolute -right-12 top-2 bg-yellow-200 text-black text-[10px] font-sans px-2 py-1 rotate-12 shadow-sm border border-yellow-400">
+            FREEWARE!
+        </div>
+</div>
+<script>
+        /**
+         * OFFLOGIC 98 
+         * Logic Engine v2.1
+         */
+        const Game = {
+            // Difficulty Configurations
+            difficulties: [
+                {
+                    name: "NOVICE",
+                    desc: "TRAINING SIMULATION.\n\nSlower speed. Simple button tasks only. No typing required.\n\n[Base Time: 4.0s]",
+                    config: { baseTime: 4000, minTime: 1500, decay: 50, types: ['ACTION', 'WAIT'] }
+                },
+                {
+                    name: "ARCADE",
+                    desc: "STANDARD PROTOCOL.\n\nThe intended experience. Moderate speed increase per level.\n\n[Base Time: 3.0s]",
+                    config: { baseTime: 3000, minTime: 1000, decay: 100, types: ['ACTION', 'WAIT'] }
+                },
+                {
+                    name: "TURBO",
+                    desc: "OVERCLOCKED MODE.\n\nFast paced. Introduces Command Line (Typing) tasks.\n\n[Base Time: 2.5s]",
+                    config: { baseTime: 2500, minTime: 800, decay: 150, types: ['ACTION', 'WAIT', 'CODE'] }
+                },
+                {
+                    name: "HACKER",
+                    desc: "ENCRYPTION DETECTED.\n\nComplex logic. 'Don't type' commands enabled. High mental load.\n\n[Base Time: 2.2s]",
+                    config: { baseTime: 2200, minTime: 600, decay: 200, types: ['ACTION', 'WAIT', 'CODE'], complex: true }
+                },
+                {
+                    name: "GLITCH",
+                    desc: "SYSTEM CORRUPTED.\n\nVisual errors. Unreliable colors. Extreme speed. Do not trust the UI.\n\n[Base Time: 1.8s]",
+                    config: { baseTime: 1800, minTime: 500, decay: 250, types: ['ACTION', 'WAIT', 'CODE'], glitch: true }
+                }
+            ],
+
+            state: {
+                active: false,
+                diffIndex: 1, // Default Arcade
+                score: 0,
+                level: 1,
+                lives: 3,
+                streak: 0, // Current Streak
+                
+                // Persistence
+                highScore: 0,
+                bestStreak: 0,
+
+                timeLeft: 0,
+                maxTime: 0,
+                timerId: null,
+                currentTask: null
+            },
+
+            audio: {
+                synth: null,
+                noise: null,
+                init: async () => {
+                    if(Game.audio.synth) return;
+                    await Tone.start();
+                    // Retro Square wave synth
+                    Game.audio.synth = new Tone.PolySynth(Tone.Synth, {
+                        oscillator: { type: "square" },
+                        envelope: { attack: 0.001, decay: 0.1, sustain: 0, release: 0.1 }
+                    }).toDestination();
+                    
+                    // Noise synth for explosions/errors
+                    Game.audio.noise = new Tone.NoiseSynth({
+                        noise: { type: 'white' },
+                        envelope: { attack: 0.001, decay: 0.2, sustain: 0 }
+                    }).toDestination();
+                },
+                playSelect: () => Game.audio.synth.triggerAttackRelease("C5", "32n"),
+                playStart: () => {
+                    const now = Tone.now();
+                    ["C4", "E4", "G4", "C5"].forEach((n, i) => Game.audio.synth.triggerAttackRelease(n, "16n", now + i*0.1));
+                },
+                playWin: () => Game.audio.synth.triggerAttackRelease(["C5", "E5"], "16n"),
+                playFail: () => Game.audio.noise.triggerAttackRelease("8n"),
+                playKey: () => Game.audio.synth.triggerAttackRelease("G2", "64n", Tone.now(), 0.1) // Typwriter sound
+            },
+
+            ui: {
+                // Mapping IDs to easier keys
+                boot: document.getElementById('boot-screen'),
+                bootText: document.getElementById('boot-text'),
+                menu: document.getElementById('menu-screen'),
+                game: document.getElementById('game-ui'),
+                gameOver: document.getElementById('game-over-screen'),
+                
+                diffList: document.getElementById('diff-list'),
+                diffDesc: document.getElementById('diff-desc'),
+                btnMenuStart: document.getElementById('btn-menu-start'),
+                menuHighScore: document.getElementById('menu-high-score'),
+                menuBestStreak: document.getElementById('menu-best-streak'),
+                
+                score: document.getElementById('score-display'),
+                level: document.getElementById('level-display'),
+                diffBadge: document.getElementById('difficulty-badge'),
+                lives: document.getElementById('lives-display'),
+                streak: document.getElementById('streak-display'),
+                timeBar: document.getElementById('time-bar'),
+                
+                mainText: document.getElementById('instruction-main'),
+                subText: document.getElementById('instruction-sub'),
+                btn: document.getElementById('game-btn'),
+                inputWrap: document.getElementById('game-input-wrapper'),
+                input: document.getElementById('game-input'),
+                feedback: document.getElementById('feedback-flash'),
+                feedbackText: document.getElementById('feedback-text'),
+                
+                deathReason: document.getElementById('death-reason'),
+                finalScore: document.getElementById('final-score'),
+                finalHighScore: document.getElementById('final-high-score'),
+                finalStreak: document.getElementById('final-streak'),
+                finalBestStreak: document.getElementById('final-best-streak'),
+                newRecordAlert: document.getElementById('new-record-alert'),
+                
+                powerLed: document.getElementById('power-led'),
+                extDownload: document.getElementById('external-download-btn')
+            },
+
+            // --- INITIALIZATION ---
+            init() {
+                // Load Persistence
+                this.state.highScore = parseInt(localStorage.getItem('offlogic_highscore')) || 0;
+                this.state.bestStreak = parseInt(localStorage.getItem('offlogic_beststreak')) || 0;
+                
+                this.runBootSequence();
+                this.setupMenu();
+                
+                // Button Events
+                this.ui.btnMenuStart.addEventListener('click', () => this.startGame());
+                document.getElementById('btn-restart').addEventListener('click', () => {
+                    this.ui.gameOver.classList.add('hidden');
+                    this.ui.menu.classList.remove('hidden');
+                    this.updateMenuStats(); // Refresh stats on menu return
+                });
+                
+                // External Download Button
+                this.ui.extDownload.addEventListener('click', () => this.downloadGame());
+
+                // Game Inputs
+                this.ui.btn.addEventListener('mousedown', () => this.handleInput('click'));
+                this.ui.input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        this.handleInput('type', this.ui.input.value.toUpperCase().trim());
+                        this.ui.input.value = '';
+                    } else {
+                        // Typewriter sound effect
+                        if(this.state.active) this.audio.playKey();
+                    }
+                });
+            },
+
+            async runBootSequence() {
+                this.ui.powerLed.classList.add('on');
+                document.getElementById('screen-content').classList.add('animate-turn-on');
+                
+                const lines = [
+                    "HIMEM is testing extended memory...done.",
+                    "Loading DOS...",
+                    "C:\\> CD GAMES\\OFFLOGIC",
+                    "C:\\GAMES\\OFFLOGIC> OFFLOGIC.EXE",
+                    "Initializing graphics adapter...",
+                    "Sound Blaster 16 detected at Port 220..."
+                ];
+
+                for (let line of lines) {
+                    this.ui.bootText.innerText += line + "\n";
+                    await new Promise(r => setTimeout(r, Math.random() * 400 + 100));
+                }
+                
+                await new Promise(r => setTimeout(r, 500));
+                this.ui.boot.classList.add('hidden');
+                this.ui.menu.classList.remove('hidden');
+                this.updateDiffSelection(1); // Select Arcade by default
+                this.updateMenuStats();
+            },
+
+            setupMenu() {
+                const items = document.querySelectorAll('.diff-item');
+                items.forEach(item => {
+                    item.addEventListener('click', () => {
+                        this.audio.init();
+                        this.audio.playSelect();
+                        this.updateDiffSelection(parseInt(item.dataset.level));
+                    });
+                });
+            },
+
+            updateMenuStats() {
+                this.ui.menuHighScore.innerText = this.state.highScore.toString().padStart(6, '0');
+                this.ui.menuBestStreak.innerText = this.state.bestStreak;
+            },
+
+            updateDiffSelection(index) {
+                this.state.diffIndex = index;
+                const items = document.querySelectorAll('.diff-item');
+                items.forEach(i => i.classList.remove('active'));
+                items[index].classList.add('active');
+                this.ui.diffDesc.innerText = this.difficulties[index].desc;
+            },
+
+            async startGame() {
+                await this.audio.init();
+                this.audio.playStart();
+                
+                this.ui.menu.classList.add('hidden');
+                this.ui.game.classList.remove('hidden');
+                
+                // Reset State
+                this.state.score = 0;
+                this.state.level = 1;
+                this.state.lives = 3;
+                this.state.streak = 0;
+                this.state.active = true;
+                
+                // Apply Settings
+                const diff = this.difficulties[this.state.diffIndex];
+                this.ui.diffBadge.innerText = diff.name;
+                
+                // Color theme for difficulty
+                if (diff.name === 'GLITCH') this.ui.diffBadge.className = "bg-retro-red text-white px-3 py-1 animate-pulse";
+                else if (diff.name === 'NOVICE') this.ui.diffBadge.className = "bg-retro-amber text-black px-3 py-1";
+                else this.ui.diffBadge.className = "bg-retro-green text-black px-3 py-1";
+
+                this.updateHUD();
+                
+                // Fade in
+                setTimeout(() => {
+                    this.ui.game.classList.remove('opacity-0');
+                    this.nextRound();
+                }, 500);
+            },
+
+            // --- MAIN GAME LOOP ---
+            nextRound() {
+                if (!this.state.active) return;
+                
+                const settings = this.difficulties[this.state.diffIndex].config;
+
+                // 1. Generate Task
+                this.state.currentTask = this.generateTask(settings);
+                this.renderTask(this.state.currentTask);
+
+                // 2. Set Time
+                const decay = (this.state.level - 1) * settings.decay;
+                const duration = Math.max(settings.minTime, settings.baseTime - decay);
+                this.state.maxTime = duration;
+                this.state.timeLeft = duration;
+
+                // 3. Timer Loop
+                if (this.state.timerId) cancelAnimationFrame(this.state.timerId);
+                let lastTime = performance.now();
+
+                const loop = (now) => {
+                    if (!this.state.active) return;
+                    const delta = now - lastTime;
+                    lastTime = now;
+                    this.state.timeLeft -= delta;
+
+                    this.renderTimer();
+
+                    if (this.state.timeLeft <= 0) {
+                        this.handleResult(false, "TIMEOUT");
+                    } else {
+                        this.state.timerId = requestAnimationFrame(loop);
+                    }
+                };
+                this.state.timerId = requestAnimationFrame(loop);
+            },
+
+            generateTask(settings) {
+                const type = settings.types[Math.floor(Math.random() * settings.types.length)];
+                let task = { type, text: "", sub: "", btnText: "PRESS", inputType: "BUTTON", target: null, answer: "" };
+
+                // Glitch Mode Randomizer
+                const isGlitch = settings.glitch && Math.random() > 0.6;
+                const isComplex = settings.complex || settings.glitch;
+
+                switch (type) {
+                    case 'ACTION':
+                        task.text = "PRESS BUTTON";
+                        task.sub = "AUTHORIZATION REQUIRED";
+                        task.answer = "ACT";
+                        break;
+
+                    case 'WAIT':
+                        task.text = "DO NOT PRESS";
+                        task.sub = "WAITING FOR UPLOAD...";
+                        task.btnText = "ABORT";
+                        task.answer = "WAIT";
+                        break;
+
+                    case 'CODE':
+                        task.inputType = "TEXT";
+                        const words = ["RUN", "DIR", "MEM", "ECHO", "CD", "CLS"];
+                        const word = words[Math.floor(Math.random() * words.length)];
+                        
+                        // Complex Mode: "Don't Type X"
+                        if (isComplex && Math.random() > 0.6) {
+                            task.text = `IGNORE COMMAND: ${word}`;
+                            task.sub = "DO NOT INPUT";
+                            task.target = word;
+                            task.answer = "WAIT";
+                        } else {
+                            task.text = `INPUT CODE: ${word}`;
+                            task.sub = "MANUAL OVERRIDE";
+                            task.target = word;
+                            task.answer = "TYPE";
+                        }
+                        break;
+                }
+                
+                // Color Logic
+                task.color = (type === 'WAIT') ? 'text-retro-red' : 'text-retro-green';
+                
+                // Glitch Effect: Swap Colors visually to confuse
+                if (settings.glitch && Math.random() > 0.5) {
+                    task.color = (task.color === 'text-retro-red') ? 'text-retro-green' : 'text-retro-red';
+                }
+
+                return task;
+            },
+
+            renderTask(task) {
+                const main = this.ui.mainText;
+                const sub = this.ui.subText;
+                const btn = this.ui.btn;
+                const inputWrap = this.ui.inputWrap;
+
+                main.innerText = task.text;
+                sub.innerText = task.sub;
+                
+                // Apply Text Color
+                main.className = `font-arcade text-3xl md:text-5xl leading-relaxed flicker ${task.color}`;
+
+                // Inputs
+                if (task.inputType === 'TEXT') {
+                    btn.classList.add('hidden');
+                    inputWrap.classList.remove('hidden');
+                    inputWrap.classList.add('flex');
+                    this.ui.input.value = '';
+                    this.ui.input.focus();
+                } else {
+                    inputWrap.classList.remove('flex');
+                    inputWrap.classList.add('hidden');
+                    btn.classList.remove('hidden');
+                    btn.innerText = task.btnText;
+                    
+                    // Button Color
+                    btn.className = "btn-action px-10 py-6 text-xl md:text-2xl transition-transform ";
+                    if (task.type === 'WAIT') btn.classList.add('red');
+                    else btn.classList.add('green');
+                }
+            },
+
+            renderTimer() {
+                const pct = (this.state.timeLeft / this.state.maxTime) * 100;
+                this.ui.timeBar.style.width = `${pct}%`;
+                
+                // Colors
+                if (pct < 30) this.ui.timeBar.classList.replace('bg-retro-green', 'bg-retro-red');
+                else this.ui.timeBar.classList.replace('bg-retro-red', 'bg-retro-green');
+            },
+
+            // --- INPUT & RESULTS ---
+            handleInput(inputType, value) {
+                if (!this.state.active) return;
+                const task = this.state.currentTask;
+                let correct = false;
+                let failReason = "BAD INPUT";
+
+                if (task.answer === 'ACT') {
+                    if (inputType === 'click') correct = true;
+                }
+                else if (task.answer === 'WAIT') {
+                    if (inputType === 'click') failReason = "SHOULD NOT PRESS";
+                    if (inputType === 'type') failReason = "SHOULD NOT TYPE";
+                }
+                else if (task.answer === 'TYPE') {
+                    if (inputType === 'type' && value === task.target) correct = true;
+                    else failReason = "WRONG CODE";
+                }
+
+                if (correct) this.handleResult(true);
+                else {
+                    // Only penalize active errors immediately
+                    if (inputType === 'type' && task.answer !== 'WAIT' && !correct) this.handleResult(false, failReason);
+                    else if (inputType !== 'type') this.handleResult(false, failReason);
+                }
+            },
+
+            handleResult(success, reason) {
+                if (success) {
+                    this.audio.playWin();
+                    const multiplier = this.state.diffIndex + 1;
+                    this.state.score += (100 * this.state.level * multiplier);
+                    this.state.level++;
+                    this.state.streak++;
+                    
+                    // Update Best Streak in memory (save at end)
+                    if (this.state.streak > this.state.bestStreak) {
+                        this.state.bestStreak = this.state.streak;
+                    }
+
+                    this.showFeedback("OK", "text-retro-green");
+                    this.updateHUD();
+                    
+                    cancelAnimationFrame(this.state.timerId);
+                    setTimeout(() => this.nextRound(), 250);
+                } else {
+                    this.audio.playFail();
+                    this.state.lives--;
+                    this.state.streak = 0; // Reset streak on loss
+                    
+                    this.updateHUD();
+                    this.showFeedback("ERR", "text-retro-red");
+                    
+                    cancelAnimationFrame(this.state.timerId);
+
+                    if (this.state.lives <= 0) {
+                        this.gameOver(reason);
+                    } else {
+                        setTimeout(() => this.nextRound(), 1000);
+                    }
+                }
+            },
+
+            showFeedback(text, color) {
+                this.ui.feedback.classList.remove('hidden');
+                this.ui.feedbackText.innerText = text;
+                this.ui.feedbackText.className = `font-arcade text-6xl crt-glow ${color}`;
+                setTimeout(() => this.ui.feedback.classList.add('hidden'), 200);
+            },
+
+            updateHUD() {
+                this.ui.score.innerText = this.state.score.toString().padStart(6, '0');
+                this.ui.level.innerText = `STAGE ${this.state.level}`;
+                this.ui.streak.innerText = `STREAK: ${this.state.streak}`;
+                
+                let hearts = "";
+                for(let i=0; i<this.state.lives; i++) hearts += "♥";
+                this.ui.lives.innerText = hearts;
+            },
+
+            gameOver(reason) {
+                this.state.active = false;
+                
+                // Save Persistence
+                let isNewRecord = false;
+                if (this.state.score > this.state.highScore) {
+                    this.state.highScore = this.state.score;
+                    isNewRecord = true;
+                }
+                
+                // Save to LocalStorage
+                localStorage.setItem('offlogic_highscore', this.state.highScore);
+                localStorage.setItem('offlogic_beststreak', this.state.bestStreak);
+
+                // UI Updates
+                this.ui.game.classList.add('hidden');
+                this.ui.gameOver.classList.remove('hidden');
+                
+                this.ui.deathReason.innerText = reason;
+                this.ui.finalScore.innerText = this.state.score;
+                this.ui.finalHighScore.innerText = this.state.highScore;
+                this.ui.finalStreak.innerText = this.state.streak; // This will be 0 because they died
+                this.ui.finalBestStreak.innerText = this.state.bestStreak;
+
+                if (isNewRecord) {
+                    this.ui.newRecordAlert.classList.remove('hidden');
+                } else {
+                    this.ui.newRecordAlert.classList.add('hidden');
+                }
+            },
+
+            downloadGame() {
+                const zip = new JSZip();
+                const html = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+                zip.file("index.html", html);
+                zip.generateAsync({type:"blob"}).then(c => saveAs(c, "OFFLOGIC_98.zip"));
+            }
+        };
+
+        window.onload = () => Game.init();
+    </script>
+
+</body></html>
