@@ -119,6 +119,8 @@ Unlock the full potential of your development workflow by combining **TRAE's SOL
 
 [**Explore TRAE Plans & Start for Free**](https://www.trae.ai/s/WJtxyE)
 
+[**Explore GLM Model plans with 10% discount code**](https://z.ai/subscribe?ic=R0K78RJKNW)
+
 ## 🛠️ GLM 4.6 Alternative IDE Options
 
 The GLM 4.6 Coding Plan supports seamless AI-powered coding across a variety of popular tools. Once subscribed, GLM-4.6 is automatically available in these environments without complex configuration.
