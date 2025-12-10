@@ -18,7 +18,7 @@ I am creating here mini html5 based games using vibe coding practice. You may fe
 
 A retro-styled puzzle and logic game that takes you back to the Windows 98 era. Features a CRT monitor aesthetic, scanlines, and "hacking" style gameplay. Test your reflexes and logic skills as you progress through difficulty levels from Novice to Glitch.
 
-![OFFLOGIC Game](https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=retro%20crt%20monitor%20interface%20green%20text%20black%20background%20windows%2098%20style%20pixel%20art%20hacking%20game&image_size=landscape_16_9)
+![OFFLOGIC Game](assets/offlogic_98.png)
 
 ---
 
@@ -27,7 +27,7 @@ A retro-styled puzzle and logic game that takes you back to the Windows 98 era. 
 
 An immersive coding RPG simulation created with GLM 4.6. Enter the "QuestRoom" and choose your path from Intern to Vibe God. Solve coding challenges against the clock in a beautiful twilight-themed interface with neon indigo aesthetics.
 
-![Vibe Coding Saga GLM](https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20coding%20game%20interface%20neon%20purple%20indigo%20twilight%20moon%20atmosphere%20rpg%20stats&image_size=landscape_16_9)
+![Vibe Coding Saga GLM](assets/vibe_saga_glm.png)
 
 ---
 
@@ -36,7 +36,7 @@ An immersive coding RPG simulation created with GLM 4.6. Enter the "QuestRoom" a
 
 The Gemini 3 Pro generated version of the Vibe Coding Saga. Experience the coding quest with a distinct flavor. Compare how different AI models architect the same game concept while enjoying the deep space coding atmosphere.
 
-![Vibe Coding Saga Gemini](https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20coding%20game%20interface%20cyan%20blue%20deep%20space%20gemini%20constellation%20background%20sleek%20ui&image_size=landscape_16_9)
+![Vibe Coding Saga Gemini](assets/vibe_saga_gemini.png)
 
 ---
 
