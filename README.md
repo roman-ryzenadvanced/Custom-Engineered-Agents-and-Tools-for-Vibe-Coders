@@ -466,18 +466,18 @@ claude
 
 ## 🕹️ Vibe Games
 
-<a href="https://gitlab.com/ryzenadvanced/vibecoding-games/-/tree/main">
+<a href="https://github.com/roman-ryzenadvanced/Custom-Engineered-Agents-and-Tools-for-Vibe-Coders/tree/main/vibecoding-games">
   <img src="assets/vibe_games_banner.svg" alt="Vibe Games" width="100%">
 </a>
 
 Explore a collection of HTML5 mini-games developed using **Vibe Coding** techniques.
 
-[**Browse Games Collection**](https://github.com/ryzenadvanced-beep/Custom-Engineered-Agents-and-Tools-for-Vibe-Coders/tree/main/vibecoding-games)
+[**Browse Games Collection**](https://github.com/roman-ryzenadvanced/Custom-Engineered-Agents-and-Tools-for-Vibe-Coders/tree/main/vibecoding-games)
 
 ---
 
 - [10% Discount token for Z.AI GLM Models](https://z.ai/subscribe?ic=R0K78RJKNW)
-- [TRAE.AI Integration guide with GLM 4.6 Model](https://gitlab.com/ryzenadvanced/ultimate-custom-engineered-coding-agents-trae-ai-glm-4-6-vibe-coding-lab/-/raw/main/Adding_GLM_4.6_Model_to_TRAE__A_Visual_Guide__3_.pdf?inline=true)
+- [TRAE.AI Integration guide with GLM 4.6 Model](https://github.com/roman-ryzenadvanced/Custom-Engineered-Agents-and-Tools-for-Vibe-Coders/blob/main/Adding_GLM_4.6_Model_to_TRAE__A_Visual_Guide__3_.pdf)
 - [TRAE.AI and SOLO Agent official page](https://www.trae.ai/s/WJtxyE)
 
 <p align="center">
