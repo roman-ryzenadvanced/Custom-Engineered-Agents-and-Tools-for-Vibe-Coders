@@ -4,8 +4,8 @@
   <img src="https://img.shields.io/badge/GLM_4.6-Powered-orange?style=for-the-badge">
 </p>
 
-<h1 align="center">🤖 Ultimate Custom Engineered AI Agents | And More... </h1>
-<h3 align="center">Uncapped AI Agents Collection for Vibe Coders</h3>
+<h1 align="center">🤖 Ultimate Custom Engineered AI Agents & More... </h1>
+<h3 align="center">Uncapped tools Collection for Vibe Coders</h3>
 
 <p align="center">
   <a href="#-quick-start">🚀 Quick Start</a> •
