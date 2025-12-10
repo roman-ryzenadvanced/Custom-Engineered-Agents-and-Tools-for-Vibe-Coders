@@ -406,11 +406,31 @@ Wait for the user to provide their codebase or ask to start the PWA conversion. 
 
 Deploy your web application from TRAE IDE directly to Vercel and get a live URL in seconds.
 
-| Step | Action |
-| :---: | :--- |
-| 1 | **Click "Deploy"** in the AI Chat panel or Browser tool. |
-| 2 | **Authorize Vercel:** Click "Start Authorization" → Select "All Projects" → Click "Install". |
-| 3 | **Go Live:** Click "Redeploy" to get your live, shareable link! |
+**Step 1: Click "Deploy"**
+
+Find the deploy button in the **AI Chat panel** or the **Browser tool**. You can also just ask the AI to "Deploy this".
+
+<details>
+<summary>📸 See screenshot</summary>
+<br>
+<img src="https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/22c63555ed3544c6bf850582df2801c4~tplv-10qhjjqwgv-quality:q75.awebp" width="100%" alt="Deploy Button">
+</details>
+
+**Step 2: Authorize Vercel**
+
+- Click **"Start Authorization"** in the popup.
+- In Vercel, select **"All Projects"** scope.
+- Click **"Install"**.
+
+<details>
+<summary>📸 See screenshot</summary>
+<br>
+<img src="https://p16-arcosite-va.ibyteimg.com/tos-maliva-i-10qhjjqwgv-us/633dbaeb590640a69210ed043f403eee~tplv-10qhjjqwgv-quality:q75.awebp" width="100%" alt="Vercel Authorization">
+</details>
+
+**Step 3: Go Live**
+
+Back in TRAE, click **"Redeploy"**. You'll get a live, shareable link instantly!
 
 ---
 
