@@ -507,9 +507,9 @@ Explore a collection of HTML5 mini-games developed using **Vibe Coding** techniq
 
 ### Recommended Utils
 
-| Tool | Author | Description | Link |
-| :--- | :--- | :--- | :---: |
-| **Universal Context Engine** | **Eskapeum** | An indexing context-engine that's baked into your project and works with **ANY** AI/LLM tool to provide superior context. | [**View on GitHub**](https://github.com/Eskapeum/Context-Engine) |
+| Tool | Author | Tested | Description | Link |
+| :--- | :--- | :---: | :--- | :---: |
+| **Universal Context Engine** | **Eskapeum** | ❌ No | An indexing context-engine that's baked into your project and works with **ANY** AI/LLM tool to provide superior context. | [**View on GitHub**](https://github.com/Eskapeum/Context-Engine) |
 
 ---
 
