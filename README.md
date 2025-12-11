@@ -114,7 +114,7 @@
 <tr>
 <td colspan="2" align="center">
 <a href="https://s.trae.ai/a/fe405e"><img src="assets/glm_code_conservator.svg" alt="GLM Code Conservator" width="50%"></a>
-<br><sub>Safe GLM 4.6 operation on existing code</sub>
+<br><sub>Attempt allowing GLM 4.6 model operate on an existing code of other models without breaking it.<br>Essential for non-greenfield projects where code preservation is key.</sub>
 <br><a href="https://s.trae.ai/a/fe405e"><strong>⚡ Install Agent</strong></a>
 </td>
 </tr>
