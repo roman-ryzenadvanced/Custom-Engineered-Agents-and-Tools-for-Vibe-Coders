@@ -96,6 +96,17 @@
 <br><a href="https://s.trae.ai/a/8a1286"><strong>⚡ Install Agent</strong></a>
 </td>
 </tr>
+<tr>
+<td width="50%" align="center">
+<a href="https://s.trae.ai/a/287cc3"><img src="assets/solo_apex.svg" alt="SOLO APEX" width="100%"></a>
+<br><sub>Research-driven architect for AI VIBE coding & complex solutions</sub>
+<br><a href="https://s.trae.ai/a/287cc3"><strong>⚡ Install Agent</strong></a>
+</td>
+<td width="50%" align="center">
+<img src="assets/coming_soon.svg" alt="Coming Soon" width="100%">
+<br><br><br>
+</td>
+</tr>
 
 <!-- Defense Series -->
 <tr><td colspan="2"><h3>Defense Series</h3></td></tr>

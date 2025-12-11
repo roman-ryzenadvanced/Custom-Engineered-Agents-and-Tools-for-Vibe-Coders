@@ -1,0 +1,37 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad_solo_apex_73h2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF2D55;stop-opacity:1" /> <!-- Vibrant Pink/Red -->
+      <stop offset="100%" style="stop-color:#FF9F0A;stop-opacity:1" /> <!-- Bright Orange -->
+    </linearGradient>
+    <filter id="glow_solo_apex">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Container -->
+  <rect width="400" height="250" fill="#050510" rx="15" ry="15"/>
+  
+  <!-- Neon Border -->
+  <rect x="2" y="2" width="396" height="246" fill="none" stroke="url(#grad_solo_apex_73h2)" stroke-width="3" rx="12" ry="12"/>
+  
+  <!-- Central Icon (Stylized Abstract Shape/Pyramid) -->
+  <g transform="translate(200, 105)">
+      <!-- Hexagon Background for Icon -->
+      <path d="M0 -45 L39 -22.5 L39 22.5 L0 45 L-39 22.5 L-39 -22.5 Z" fill="url(#grad_solo_apex_73h2)" opacity="0.1" />
+      <path d="M0 -45 L39 -22.5 L39 22.5 L0 45 L-39 22.5 L-39 -22.5 Z" fill="none" stroke="url(#grad_solo_apex_73h2)" stroke-width="2" />
+      
+      <!-- Inner Symbol (Arrow/Apex) -->
+      <path d="M-15 10 L0 -20 L15 10 M0 -20 V25" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Agent Title -->
+  <text x="200" y="180" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="1">SOLO APEX</text>
+  
+  <!-- Agent Subtitle -->
+  <text x="200" y="205" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#cccccc" text-anchor="middle" letter-spacing="0.5">TECHNICAL RESEARCH &amp; AUGMENTATION</text>
+</svg>
