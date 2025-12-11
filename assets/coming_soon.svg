@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="grad_soon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#434343;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="400" height="250" rx="20" fill="#1a1a1a" />
+  <rect x="10" y="10" width="380" height="230" rx="15" fill="none" stroke="url(#grad_soon)" stroke-width="4" stroke-dasharray="10,5" opacity="0.5"/>
+  
+  <g transform="translate(150, 60)" opacity="0.3">
+    <path d="M50 0 L93.3 25 V75 L50 100 L6.7 75 V25 Z" fill="url(#grad_soon)" filter="url(#shadow)" />
+    <text x="50" y="55" font-family="Arial, sans-serif" font-size="40" fill="white" text-anchor="middle" dominant-baseline="middle">?</text>
+  </g>
+  
+  <text x="50%" y="200" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="#666666">COMING SOON</text>
+  <text x="50%" y="225" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#444444">NEW AGENT IN DEVELOPMENT</text>
+</svg>

@@ -59,10 +59,14 @@
 </td>
 </tr>
 <tr>
-<td colspan="2" align="center">
+<td width="50%" align="center">
 <a href="https://s.trae.ai/a/01708c"><img src="assets/opus_qa_engineer.svg" alt="OPUS QA ENGINEER" width="100%"></a>
 <br><sub>Enhanced QA process based on Opus model</sub>
 <br><a href="https://s.trae.ai/a/01708c"><strong>⚡ Install Agent</strong></a>
+</td>
+<td width="50%" align="center">
+<img src="assets/coming_soon.svg" alt="Coming Soon" width="100%">
+<br><br><br>
 </td>
 </tr>
 </table>
@@ -112,10 +116,14 @@
 </td>
 </tr>
 <tr>
-<td colspan="2" align="center">
+<td width="50%" align="center">
 <a href="https://s.trae.ai/a/fe405e"><img src="assets/glm_code_conservator.svg" alt="GLM Code Conservator" width="100%"></a>
 <br><sub>Attempt allowing GLM 4.6 model operate on an existing code of other models without breaking it.<br>Essential for non-greenfield projects where code preservation is key.</sub>
 <br><a href="https://s.trae.ai/a/fe405e"><strong>⚡ Install Agent</strong></a>
+</td>
+<td width="50%" align="center">
+<img src="assets/coming_soon.svg" alt="Coming Soon" width="100%">
+<br><br><br>
 </td>
 </tr>
 </table>
