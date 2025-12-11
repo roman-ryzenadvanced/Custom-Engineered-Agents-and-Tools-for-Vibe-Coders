@@ -45,7 +45,7 @@
 
 ### OPUS Series
 
-<table width="100%" style="table-layout:fixed;">
+<table width="100%" style="width:100%; table-layout:fixed;">
 <tr>
 <td width="50%" align="center">
 <a href="https://s.trae.ai/a/c5a3e9"><img src="assets/claude_opus_4_5_wrap.svg" alt="Claude Opus 4.5 Wrap" width="100%"></a>
@@ -73,7 +73,7 @@
 
 ### Specialized Agents
 
-<table width="100%" style="table-layout:fixed;">
+<table width="100%" style="width:100%; table-layout:fixed;">
 <tr>
 <td width="50%" align="center">
 <a href="https://s.trae.ai/a/25f7a7"><img src="assets/kiro_trae_ultra_x.svg" alt="KIRO TRAE ULTRA X" width="100%"></a>
@@ -102,7 +102,7 @@
 
 ### Defense Series
 
-<table width="100%" style="table-layout:fixed;">
+<table width="100%" style="width:100%; table-layout:fixed;">
 <tr>
 <td width="50%" align="center">
 <a href="https://s.trae.ai/a/0bfb9e"><img src="assets/amnesia_defense.svg" alt="Amnesia Defense" width="100%"></a>
