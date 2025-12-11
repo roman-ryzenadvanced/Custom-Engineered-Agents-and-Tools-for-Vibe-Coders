@@ -41,6 +41,8 @@
 
 ## 🤖 Available Agents
 
+> **⚠️ Smart Disclaimer:** While these specialized agents are engineered for optimized performance, they cannot guarantee 100% success in every coding scenario. **Always ensure you have a valid backup or git commit before proceeding with any agent operations.** We strongly recommend experimenting with each agent in a controlled setting to understand its specific capabilities before applying it to critical projects.
+
 ### OPUS Series
 
 <table width="100%">
