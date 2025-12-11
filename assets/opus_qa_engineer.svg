@@ -1,28 +1,22 @@
-<svg width="700" height="150" viewBox="0 0 700 150" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
   <defs>
-    <linearGradient id="grad_Dbw8TeEi" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#007cf0;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00dfd8;stop-opacity:1" />
+    <linearGradient id="grad_qa" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
     </linearGradient>
-    <pattern id="grid_Dbw8TeEi" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.1"/>
-    </pattern>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
   </defs>
+  <rect width="400" height="250" rx="20" fill="#1a1a1a" />
+  <rect x="10" y="10" width="380" height="230" rx="15" fill="none" stroke="url(#grad_qa)" stroke-width="4" />
   
-  <!-- Dark Background -->
-  <rect width="700" height="150" fill="#050510" rx="15" ry="15"/>
-  <!-- Grid Overlay -->
-  <rect width="700" height="150" fill="url(#grid_Dbw8TeEi)" rx="15" ry="15"/>
+  <g transform="translate(150, 60)">
+    <path d="M50 0 L93.3 25 V75 L50 100 L6.7 75 V25 Z" fill="url(#grad_qa)" filter="url(#shadow)" opacity="0.9" />
+    <path d="M35 50 L45 60 L65 40" stroke="white" stroke-width="5" stroke-linecap="round" fill="none" />
+    <circle cx="50" cy="50" r="25" stroke="white" stroke-width="3" fill="none" />
+  </g>
   
-  <!-- Neon Border -->
-  <rect x="2" y="2" width="696" height="146" fill="none" stroke="url(#grad_Dbw8TeEi)" stroke-width="3" rx="12" ry="12"/>
-  
-  <!-- Title -->
-  <text x="350" y="50" font-family="Arial, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="1">OPUS QA ENGINEER</text>
-  
-  <!-- Description -->
-  <text x="350" y="80" font-family="Arial, sans-serif" font-size="14" fill="#cccccc" text-anchor="middle">Trained to enhance the AI models ability for quality assurance process, based on Opus model.</text>
-  
-  <!-- Footer Tag -->
-  <text x="680" y="135" font-family="Arial, sans-serif" font-size="10" fill="url(#grad_Dbw8TeEi)" text-anchor="end" font-weight="bold" style="text-transform: uppercase;">TRAE Custom Engineered Agent</text>
+  <text x="50%" y="200" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="white">OPUS QA ENGINEER</text>
+  <text x="50%" y="225" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">QUALITY ASSURANCE</text>
 </svg>

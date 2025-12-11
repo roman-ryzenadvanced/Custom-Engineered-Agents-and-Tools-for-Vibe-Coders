@@ -1,28 +1,22 @@
-<svg width="700" height="150" viewBox="0 0 700 150" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
   <defs>
-    <linearGradient id="grad_EGVs8iyb" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ff4d4d;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f9cb28;stop-opacity:1" />
+    <linearGradient id="grad_framework" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C6FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0072FF;stop-opacity:1" />
     </linearGradient>
-    <pattern id="grid_EGVs8iyb" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.1"/>
-    </pattern>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
   </defs>
+  <rect width="400" height="250" rx="20" fill="#1a1a1a" />
+  <rect x="10" y="10" width="380" height="230" rx="15" fill="none" stroke="url(#grad_framework)" stroke-width="4" />
   
-  <!-- Dark Background -->
-  <rect width="700" height="150" fill="#050510" rx="15" ry="15"/>
-  <!-- Grid Overlay -->
-  <rect width="700" height="150" fill="url(#grid_EGVs8iyb)" rx="15" ry="15"/>
+  <g transform="translate(150, 60)">
+    <path d="M50 0 L93.3 25 V75 L50 100 L6.7 75 V25 Z" fill="url(#grad_framework)" filter="url(#shadow)" opacity="0.9" />
+    <rect x="30" y="30" width="40" height="40" fill="none" stroke="white" stroke-width="4" rx="4" />
+    <path d="M30 50 L70 50 M50 30 L50 70" stroke="white" stroke-width="4" />
+  </g>
   
-  <!-- Neon Border -->
-  <rect x="2" y="2" width="696" height="146" fill="none" stroke="url(#grad_EGVs8iyb)" stroke-width="3" rx="12" ry="12"/>
-  
-  <!-- Title -->
-  <text x="350" y="50" font-family="Arial, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="1">OPUS FRAMEWORK 4.5</text>
-  
-  <!-- Description -->
-  <text x="350" y="80" font-family="Arial, sans-serif" font-size="14" fill="#cccccc" text-anchor="middle">Offers major models some of the development patterns of the popular Claude Opus 4.5 model (Veriation 2).</text>
-  
-  <!-- Footer Tag -->
-  <text x="680" y="135" font-family="Arial, sans-serif" font-size="10" fill="url(#grad_EGVs8iyb)" text-anchor="end" font-weight="bold" style="text-transform: uppercase;">TRAE Custom Engineered Agent</text>
+  <text x="50%" y="200" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="white">OPUS FRAMEWORK 4.5</text>
+  <text x="50%" y="225" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">ADVANCED STRUCTURE</text>
 </svg>

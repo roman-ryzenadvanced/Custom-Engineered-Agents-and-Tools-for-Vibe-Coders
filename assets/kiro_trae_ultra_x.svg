@@ -1,28 +1,21 @@
-<svg width="700" height="150" viewBox="0 0 700 150" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
   <defs>
-    <linearGradient id="grad_agsLCqVL" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ff0080;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#7928ca;stop-opacity:1" />
+    <linearGradient id="grad_kiro" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F2994A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F2C94C;stop-opacity:1" />
     </linearGradient>
-    <pattern id="grid_agsLCqVL" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.1"/>
-    </pattern>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
   </defs>
+  <rect width="400" height="250" rx="20" fill="#1a1a1a" />
+  <rect x="10" y="10" width="380" height="230" rx="15" fill="none" stroke="url(#grad_kiro)" stroke-width="4" />
   
-  <!-- Dark Background -->
-  <rect width="700" height="150" fill="#050510" rx="15" ry="15"/>
-  <!-- Grid Overlay -->
-  <rect width="700" height="150" fill="url(#grid_agsLCqVL)" rx="15" ry="15"/>
+  <g transform="translate(150, 60)">
+    <path d="M50 0 L93.3 25 V75 L50 100 L6.7 75 V25 Z" fill="url(#grad_kiro)" filter="url(#shadow)" opacity="0.9" />
+    <path d="M55 25 L35 55 L65 55 L45 85" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
   
-  <!-- Neon Border -->
-  <rect x="2" y="2" width="696" height="146" fill="none" stroke="url(#grad_agsLCqVL)" stroke-width="3" rx="12" ry="12"/>
-  
-  <!-- Title -->
-  <text x="350" y="50" font-family="Arial, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="1">KIRO TRAE ULTRA X</text>
-  
-  <!-- Description -->
-  <text x="350" y="80" font-family="Arial, sans-serif" font-size="14" fill="#cccccc" text-anchor="middle">Attempt to offer the large models at hand some of the process concepts of the Amazon Kiro agent.</text>
-  
-  <!-- Footer Tag -->
-  <text x="680" y="135" font-family="Arial, sans-serif" font-size="10" fill="url(#grad_agsLCqVL)" text-anchor="end" font-weight="bold" style="text-transform: uppercase;">TRAE Custom Engineered Agent</text>
+  <text x="50%" y="200" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="white">KIRO TRAE ULTRA X</text>
+  <text x="50%" y="225" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">AMAZON CONCEPTS</text>
 </svg>

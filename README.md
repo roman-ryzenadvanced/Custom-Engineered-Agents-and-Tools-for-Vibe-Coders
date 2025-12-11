@@ -47,21 +47,15 @@
 <tr>
 <td width="33%" align="center">
 <a href="https://s.trae.ai/a/c5a3e9"><img src="assets/claude_opus_4_5_wrap.svg" alt="Claude Opus 4.5 Wrap" width="100%"></a>
-<br><strong>Claude Opus 4.5 Wrap</strong>
-<br><sub>Development patterns of Claude Opus 4.5 (Variation 1)</sub>
-<br><a href="https://s.trae.ai/a/c5a3e9">Install Agent</a>
+<br><br><a href="https://s.trae.ai/a/c5a3e9"><strong>⚡ Install Agent</strong></a>
 </td>
 <td width="33%" align="center">
 <a href="https://s.trae.ai/a/114be4"><img src="assets/opus_framework_4_5.svg" alt="OPUS FRAMEWORK 4.5" width="100%"></a>
-<br><strong>OPUS FRAMEWORK 4.5</strong>
-<br><sub>Development patterns of Claude Opus 4.5 (Variation 2)</sub>
-<br><a href="https://s.trae.ai/a/114be4">Install Agent</a>
+<br><br><a href="https://s.trae.ai/a/114be4"><strong>⚡ Install Agent</strong></a>
 </td>
 <td width="33%" align="center">
 <a href="https://s.trae.ai/a/01708c"><img src="assets/opus_qa_engineer.svg" alt="OPUS QA ENGINEER" width="100%"></a>
-<br><strong>OPUS QA ENGINEER</strong>
-<br><sub>Enhanced QA process based on Opus model</sub>
-<br><a href="https://s.trae.ai/a/01708c">Install Agent</a>
+<br><br><a href="https://s.trae.ai/a/01708c"><strong>⚡ Install Agent</strong></a>
 </td>
 </tr>
 </table>
@@ -72,27 +66,19 @@
 <tr>
 <td width="25%" align="center">
 <a href="https://s.trae.ai/a/25f7a7"><img src="assets/kiro_trae_ultra_x.svg" alt="KIRO TRAE ULTRA X" width="100%"></a>
-<br><strong>KIRO TRAE ULTRA X</strong>
-<br><sub>Amazon Kiro agent concepts</sub>
-<br><a href="https://s.trae.ai/a/25f7a7">Install Agent</a>
+<br><br><a href="https://s.trae.ai/a/25f7a7"><strong>⚡ Install Agent</strong></a>
 </td>
 <td width="25%" align="center">
 <a href="https://s.trae.ai/a/4c48cd"><img src="assets/apex_omni.svg" alt="Apex Omni" width="100%"></a>
-<br><strong>Apex Omni</strong>
-<br><sub>Overclock for lower-end models</sub>
-<br><a href="https://s.trae.ai/a/4c48cd">Install Agent</a>
+<br><br><a href="https://s.trae.ai/a/4c48cd"><strong>⚡ Install Agent</strong></a>
 </td>
 <td width="25%" align="center">
 <a href="https://s.trae.ai/a/a5ec8c"><img src="assets/pwa_generator.svg" alt="PWA Generator" width="100%"></a>
-<br><strong>PWA Generator</strong>
-<br><sub>Transform web apps into PWAs</sub>
-<br><a href="https://s.trae.ai/a/a5ec8c">Install Agent</a>
+<br><br><a href="https://s.trae.ai/a/a5ec8c"><strong>⚡ Install Agent</strong></a>
 </td>
 <td width="25%" align="center">
 <a href="https://s.trae.ai/a/8a1286"><img src="assets/loop_breaker.svg" alt="Loop Breaker" width="100%"></a>
-<br><strong>Loop Breaker</strong>
-<br><sub>Break infinite reasoning loops</sub>
-<br><a href="https://s.trae.ai/a/8a1286">Install Agent</a>
+<br><br><a href="https://s.trae.ai/a/8a1286"><strong>⚡ Install Agent</strong></a>
 </td>
 </tr>
 </table>
@@ -101,25 +87,17 @@
 
 <table>
 <tr>
-<td width="50%" align="center">
+<td width="33%" align="center">
 <a href="https://s.trae.ai/a/0bfb9e"><img src="assets/amnesia_defense.svg" alt="Amnesia Defense" width="100%"></a>
-<br><strong>Amnesia Defense</strong>
-<br><sub>Minimize AI "forgetting" to complete tasks</sub>
-<br><a href="https://s.trae.ai/a/0bfb9e">Install Agent</a>
+<br><br><a href="https://s.trae.ai/a/0bfb9e"><strong>⚡ Install Agent</strong></a>
 </td>
-<td width="50%" align="center">
+<td width="33%" align="center">
 <a href="https://s.trae.ai/a/3f7075"><img src="assets/anti_amnesia_v2.svg" alt="ANTI-AMNESIA v2" width="100%"></a>
-<br><strong>ANTI-AMNESIA v2</strong>
-<br><sub>Improved version to combat AI amnesia</sub>
-<br><a href="https://s.trae.ai/a/3f7075">Install Agent</a>
+<br><br><a href="https://s.trae.ai/a/3f7075"><strong>⚡ Install Agent</strong></a>
 </td>
-</tr>
-<tr>
-<td colspan="2" align="center">
-<a href="https://s.trae.ai/a/fe405e"><img src="assets/glm_code_conservator.svg" alt="GLM Code Conservator" width="60%"></a>
-<br><strong>GLM Code Conservator</strong>
-<br><sub>Safe GLM 4.6 operation on existing code</sub>
-<br><a href="https://s.trae.ai/a/fe405e">Install Agent</a>
+<td width="33%" align="center">
+<a href="https://s.trae.ai/a/fe405e"><img src="assets/glm_code_conservator.svg" alt="GLM Code Conservator" width="100%"></a>
+<br><br><a href="https://s.trae.ai/a/fe405e"><strong>⚡ Install Agent</strong></a>
 </td>
 </tr>
 </table>

@@ -1,26 +1,22 @@
-<svg width="700" height="150" viewBox="0 0 700 150" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
   <defs>
-    <linearGradient id="grad_pwa_qhsofh" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#39FF14;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00FFFF;stop-opacity:1" />
+    <linearGradient id="grad_pwa" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec008c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fc6767;stop-opacity:1" />
     </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
   </defs>
+  <rect width="400" height="250" rx="20" fill="#1a1a1a" />
+  <rect x="10" y="10" width="380" height="230" rx="15" fill="none" stroke="url(#grad_pwa)" stroke-width="4" />
   
-  <!-- Background Container -->
-  <rect width="700" height="150" fill="#050510" rx="15" ry="15"/>
+  <g transform="translate(150, 60)">
+    <path d="M50 0 L93.3 25 V75 L50 100 L6.7 75 V25 Z" fill="url(#grad_pwa)" filter="url(#shadow)" opacity="0.9" />
+    <rect x="35" y="30" width="30" height="40" rx="3" stroke="white" stroke-width="3" fill="none" />
+    <line x1="45" y1="60" x2="55" y2="60" stroke="white" stroke-width="3" />
+  </g>
   
-  <!-- Neon Border -->
-  <rect x="2" y="2" width="696" height="146" fill="none" stroke="url(#grad_pwa_qhsofh)" stroke-width="3" rx="12" ry="12"/>
-  
-  <!-- Icon/Graphic Element (Mobile/App Icon) -->
-  <text x="80" y="95" font-family="Arial, sans-serif" font-size="60" fill="url(#grad_pwa_qhsofh)" opacity="0.2" font-weight="bold">📱</text>
-  
-  <!-- Main Title -->
-  <text x="350" y="55" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="1">PWA Generator for TRAE IDE</text>
-  
-  <!-- Description -->
-  <text x="350" y="90" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#cccccc" text-anchor="middle">Instantly transform web apps into installable PWAs.</text>
-  
-  <!-- Footer CTA -->
-  <text x="680" y="130" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="url(#grad_pwa_qhsofh)" text-anchor="end" font-weight="bold" style="text-transform: uppercase;">TRAE Custom Engineered Agent</text>
+  <text x="50%" y="200" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="white">PWA GENERATOR</text>
+  <text x="50%" y="225" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">WEB TO MOBILE</text>
 </svg>
