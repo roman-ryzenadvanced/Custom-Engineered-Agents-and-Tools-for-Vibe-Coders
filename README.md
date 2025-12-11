@@ -43,9 +43,9 @@
 
 > **⚠️ Smart Disclaimer:** While these specialized agents are engineered for optimized performance, they cannot guarantee 100% success in every coding scenario. **Always ensure you have a valid backup or git commit before proceeding with any agent operations.** We strongly recommend experimenting with each agent in a controlled setting to understand its specific capabilities before applying it to critical projects.
 
-### OPUS Series
-
-<table width="100%" style="width:100%; table-layout:fixed;">
+<table width="100%">
+<!-- OPUS Series -->
+<tr><td colspan="2"><h3>OPUS Series</h3></td></tr>
 <tr>
 <td width="50%" align="center">
 <a href="https://s.trae.ai/a/c5a3e9"><img src="assets/claude_opus_4_5_wrap.svg" alt="Claude Opus 4.5 Wrap" width="100%"></a>
@@ -69,11 +69,9 @@
 <br><br><br>
 </td>
 </tr>
-</table>
 
-### Specialized Agents
-
-<table width="100%" style="width:100%; table-layout:fixed;">
+<!-- Specialized Agents -->
+<tr><td colspan="2"><h3>Specialized Agents</h3></td></tr>
 <tr>
 <td width="50%" align="center">
 <a href="https://s.trae.ai/a/25f7a7"><img src="assets/kiro_trae_ultra_x.svg" alt="KIRO TRAE ULTRA X" width="100%"></a>
@@ -98,11 +96,9 @@
 <br><a href="https://s.trae.ai/a/8a1286"><strong>⚡ Install Agent</strong></a>
 </td>
 </tr>
-</table>
 
-### Defense Series
-
-<table width="100%" style="width:100%; table-layout:fixed;">
+<!-- Defense Series -->
+<tr><td colspan="2"><h3>Defense Series</h3></td></tr>
 <tr>
 <td width="50%" align="center">
 <a href="https://s.trae.ai/a/0bfb9e"><img src="assets/amnesia_defense.svg" alt="Amnesia Defense" width="100%"></a>
