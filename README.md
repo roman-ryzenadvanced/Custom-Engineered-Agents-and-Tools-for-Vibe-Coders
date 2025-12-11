@@ -101,17 +101,23 @@
 
 <table>
 <tr>
-<td width="50%" align="center">
+<td width="33%" align="center">
 <a href="https://s.trae.ai/a/0bfb9e"><img src="assets/amnesia_defense.svg" alt="Amnesia Defense" width="100%"></a>
 <br><strong>Amnesia Defense</strong>
 <br><sub>Minimize AI "forgetting" to complete tasks</sub>
 <br><a href="https://s.trae.ai/a/0bfb9e">Install Agent</a>
 </td>
-<td width="50%" align="center">
+<td width="33%" align="center">
 <a href="https://s.trae.ai/a/3f7075"><img src="assets/anti_amnesia_v2.svg" alt="ANTI-AMNESIA v2" width="100%"></a>
 <br><strong>ANTI-AMNESIA v2</strong>
 <br><sub>Improved version to combat AI amnesia</sub>
 <br><a href="https://s.trae.ai/a/3f7075">Install Agent</a>
+</td>
+<td width="33%" align="center">
+<a href="https://s.trae.ai/a/fe405e"><img src="assets/glm_code_conservator.svg" alt="GLM Code Conservator" width="100%"></a>
+<br><strong>GLM Code Conservator</strong>
+<br><sub>Safe GLM 4.6 operation on existing code</sub>
+<br><a href="https://s.trae.ai/a/fe405e">Install Agent</a>
 </td>
 </tr>
 </table>
