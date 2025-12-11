@@ -499,6 +499,20 @@ Explore a collection of HTML5 mini-games developed using **Vibe Coding** techniq
 
 ---
 
+---
+
+## 🛠️ Awesome Tools
+
+<img src="assets/awesome_tools_banner.svg" alt="Awesome Tools" width="100%">
+
+### Recommended Utils
+
+| Tool | Description | Link |
+| :--- | :--- | :---: |
+| **Universal Context Engine** | An indexing context-engine that's baked into your project and works with **ANY** AI/LLM tool to provide superior context. | [**View on GitHub**](https://github.com/Eskapeum/Context-Engine) |
+
+---
+
 ## 📚 Quick Links
 
 | Resource | Link |
