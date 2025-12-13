@@ -139,7 +139,7 @@
 ---
 
 ## 💡 Boost Efficiency with SOLO & GLM 4.6
-| 🎟️ **Get 10% Discount on GLM Models** | [**Subscribe Now**](https://z.ai/subscribe?ic=R0K78RJKNW) |
+🎟️ **Get 10% Discount on GLM Models** | [**Subscribe Now**](https://z.ai/subscribe?ic=R0K78RJKNW) 
 
 <a href="https://www.trae.ai/s/WJtxyE">
   <img src="assets/trae_comparison_v2.svg" alt="TRAE Plans & Savings" width="100%">
