@@ -25,6 +25,7 @@
 | Action | Link |
 | :--- | :---: |
 | 🎟️ **Get 10% Discount on GLM Models** | [**Subscribe Now**](https://z.ai/subscribe?ic=R0K78RJKNW) |
+| 🎟️ **TRAE with GLM Explained** | [**GLM Model with SOLO and TRAE**](https://github.com/roman-ryzenadvanced/Custom-Engineered-Agents-and-Tools-for-Vibe-Coders#-boost-efficiency-with-solo--glm-46) |
 | 📄 **GLM-4.6 Integration Guide (PDF)** | [**Download PDF**](./Adding_GLM_4.6_Model_to_TRAE__A_Visual_Guide__3_.pdf) |
 | 🌐 **Explore TRAE Plans** | [**Start for Free**](https://www.trae.ai/s/WJtxyE) |
 
