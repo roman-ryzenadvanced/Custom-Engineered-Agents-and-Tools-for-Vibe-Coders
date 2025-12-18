@@ -104,8 +104,9 @@
 <br><a href="https://s.trae.ai/a/287cc3"><strong>⚡ Install Agent</strong></a>
 </td>
 <td width="50%" align="center">
-<img src="assets/coming_soon.svg" alt="Coming Soon" width="100%">
-<br><br><br>
+<a href="https://s.trae.ai/a/223b13?region=sg"><img src="assets/flash_to_pro.svg" alt="Flash-to-Pro Cognitive Bridge" width="100%"></a>
+<br><sub>🚀 System Upgrade: Flash-to-Pro Cognitive Bridge<br>Overclock lightweight models to simulate Pro-tier reasoning depth.</sub>
+<br><a href="https://s.trae.ai/a/223b13?region=sg"><strong>⚡ Install Agent</strong></a>
 </td>
 </tr>
 
