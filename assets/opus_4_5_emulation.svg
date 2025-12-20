@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="grad_emulation" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1CB5E0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000851;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="400" height="250" rx="20" fill="#1a1a1a" />
+  <rect x="10" y="10" width="380" height="230" rx="15" fill="none" stroke="url(#grad_emulation)" stroke-width="4" />
+  
+  <g transform="translate(150, 60)">
+    <path d="M50 0 L93.3 25 V75 L50 100 L6.7 75 V25 Z" fill="url(#grad_emulation)" filter="url(#shadow)" opacity="0.9" />
+    <path d="M30 40 L50 60 L70 40" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50 20 L50 60" stroke="white" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="50" cy="75" r="5" fill="white" />
+  </g>
+  
+  <text x="50%" y="200" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="white">OPUS 4.5</text>
+  <text x="50%" y="225" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">EMULATION PROTOCOL</text>
+</svg>

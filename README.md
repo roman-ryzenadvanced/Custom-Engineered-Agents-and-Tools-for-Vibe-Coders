@@ -66,8 +66,9 @@
 <br><a href="https://s.trae.ai/a/01708c"><strong>⚡ Install Agent</strong></a>
 </td>
 <td width="50%" align="center">
-<img src="assets/coming_soon.svg" alt="Coming Soon" width="100%">
-<br><br><br>
+<a href="https://s.trae.ai/a/9e4f96?region=sg"><img src="assets/opus_4_5_emulation.svg" alt="Opus 4.5 EMULATION" width="100%"></a>
+<br><sub>Opus 4.5 engineering patterns - focusing on production-grade code, systematic thinking, and clear communication.</sub>
+<br><a href="https://s.trae.ai/a/9e4f96?region=sg"><strong>⚡ Install Agent</strong></a>
 </td>
 </tr>
 
