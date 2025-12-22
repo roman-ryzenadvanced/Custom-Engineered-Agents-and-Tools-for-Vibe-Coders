@@ -51,6 +51,20 @@ The latest **GLM-4.7** has arrived, redefining the frontier of **AI coding agent
 - **Extreme Value:** 25X cheaper than Claude 4.5 Opus with significantly higher performance.
 - **Real-time Tool Streaming:** Optimized for **TRAE SOLO**, **Cline**, and **Roo Code** agents.
 
+### 🛠️ Quick Tutorial: Configure GLM-4.7 in TRAE SOLO
+Setting up the world's most powerful coding model in TRAE is simple. Follow these steps to unlock SOTA performance:
+
+1. **Open TRAE SOLO Settings:** Navigate to the model configuration panel.
+2. **Set Provider:** Select `Z.ai-plan` from the dropdown.
+3. **Select Model:** Choose `Custom Model`.
+4. **Enter Model ID:** Type `glm-4.7` exactly as shown.
+5. **Add API Key:** Paste your unique key from [Z.ai](https://z.ai/subscribe?ic=R0K78RJKNW).
+6. **Confirm:** Click **Confirm** to activate the elite reasoning layer.
+
+<p align="center">
+  <img src="assets/glm_4_7_trae_config.png" alt="How to configure GLM-4.7 in TRAE SOLO" width="500px">
+</p>
+
 <p align="center">
   <a href="https://z.ai/subscribe?ic=R0K78RJKNW">
     <img src="assets/glm_discount_banner.svg" alt="GLM 4.7 Discount Code - 10% Off AI Coding" width="100%">
