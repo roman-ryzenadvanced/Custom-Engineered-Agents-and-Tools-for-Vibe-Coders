@@ -62,7 +62,7 @@ Setting up the world's most powerful coding model in TRAE is simple. Follow thes
 6. **Confirm:** Click **Confirm** to activate the elite reasoning layer.
 
 <p align="center">
-  <img src="assets/glm_4_7_trae_config.png" alt="How to configure GLM-4.7 in TRAE SOLO" width="500px">
+  <img src="assets/glm_4_7_trae_config.svg" alt="How to configure GLM-4.7 in TRAE SOLO" width="500px">
 </p>
 
 <p align="center">

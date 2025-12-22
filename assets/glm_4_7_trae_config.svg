@@ -1,0 +1,63 @@
+<svg width="500" height="460" viewBox="0 0 500 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" />
+      <feOffset dx="0" dy="4" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dialog Background -->
+  <rect x="20" y="20" width="460" height="420" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+  
+  <!-- Header -->
+  <text x="40" y="60" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1a1a1a">Edit Model</text>
+  <path d="M440 45 L455 60 M455 45 L440 60" stroke="#666" stroke-width="2"/>
+
+  <!-- Provider Field -->
+  <text x="40" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#d32f2f">* Provider</text>
+  <rect x="40" y="110" width="420" height="40" rx="6" fill="#f5f5f5" stroke="#e0e0e0"/>
+  <text x="55" y="135" font-family="Arial, sans-serif" font-size="16" fill="#1a1a1a">Z.ai-plan</text>
+  <path d="M435 125 L445 135 L455 125" fill="none" stroke="#666" stroke-width="2"/>
+  <!-- Red Arrow -->
+  <path d="M160 145 L110 130" stroke="#ff0000" stroke-width="3" fill="none"/>
+  <path d="M115 135 L105 128 L115 125" fill="#ff0000"/>
+
+  <!-- Model Field -->
+  <text x="40" y="180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#d32f2f">* Model</text>
+  <rect x="40" y="190" width="420" height="40" rx="6" fill="#f5f5f5" stroke="#e0e0e0"/>
+  <text x="55" y="215" font-family="Arial, sans-serif" font-size="16" fill="#1a1a1a">Custom Model</text>
+  <path d="M435 205 L445 215 L455 205" fill="none" stroke="#666" stroke-width="2"/>
+  <!-- Red Arrow -->
+  <path d="M220 225 L170 215" stroke="#ff0000" stroke-width="3" fill="none"/>
+  <path d="M175 220 L165 214 L175 210" fill="#ff0000"/>
+
+  <!-- Model ID Field -->
+  <text x="40" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#d32f2f">* Model ID</text>
+  <text x="340" y="260" font-family="Arial, sans-serif" font-size="14" fill="#1a1a1a" text-decoration="underline">Check ID on provider</text>
+  <rect x="40" y="270" width="420" height="40" rx="6" fill="#eeeeee" stroke="#e0e0e0"/>
+  <text x="55" y="295" font-family="Arial, sans-serif" font-size="16" fill="#1a1a1a">glm-4.7</text>
+  <!-- Red Arrow -->
+  <path d="M260 270 L190 300" stroke="#ff0000" stroke-width="3" fill="none"/>
+  <path d="M200 295 L185 303 L195 308" fill="#ff0000"/>
+
+  <!-- API Key Field -->
+  <text x="40" y="340" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#d32f2f">* API Key</text>
+  <text x="390" y="340" font-family="Arial, sans-serif" font-size="14" fill="#1a1a1a" text-decoration="underline">Get API Key</text>
+  <rect x="40" y="350" width="420" height="40" rx="6" fill="#eeeeee" stroke="#e0e0e0"/>
+  <text x="55" y="375" font-family="Arial, sans-serif" font-size="16" fill="#757575">Fill in the new API key</text>
+  <!-- Red Arrow -->
+  <path d="M280 340 L310 380" stroke="#ff0000" stroke-width="3" fill="none"/>
+  <path d="M300 375 L315 385 L312 370" fill="#ff0000"/>
+
+  <!-- Confirm Button -->
+  <rect x="40" y="410" width="420" height="40" rx="6" fill="#333333"/>
+  <text x="250" y="435" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Confirm</text>
+
+</svg>
