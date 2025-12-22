@@ -19,8 +19,8 @@
   <text x="380" y="55" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="2">THE VIBE CODERS NEWS</text>
   
   <!-- Description -->
-  <text x="380" y="90" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#cccccc" text-anchor="middle">AI Digest: GLM-4.7 Launch, Performance &amp; Benchmarks</text>
+  <text x="380" y="90" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#cccccc" text-anchor="middle">Latest AI Frontier Insights, Benchmarks &amp; Dev Hacks</text>
   
   <!-- Footer CTA -->
-  <text x="680" y="130" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="url(#grad_news)" text-anchor="end" font-weight="bold" letter-spacing="1.5">LATEST UPDATE</text>
+  <text x="680" y="130" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="url(#grad_news)" text-anchor="end" font-weight="bold" letter-spacing="1.5">STAY UPDATED</text>
 </svg>
