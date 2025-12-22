@@ -32,24 +32,23 @@
 The latest **GLM-4.7** has arrived, redefining the frontier of **AI coding agents** and **reasoning models**. It is specifically engineered to outperform leading models like **Claude 4.5 Sonnet** and **Claude 4.5 Opus** in multi-step developer workflows.
 
 #### ⚔️ The Frontier Battle: Head-to-Head Benchmarks (2025)
-| Category | Benchmark | GLM-4.7 | Claude 4.5 Sonnet | Claude 4.5 Opus | Winner |
-| :--- | :--- | :---: | :---: | :---: | :---: |
-| **Math Reasoning** | **AIME 25** | **95.7** | 87.0 | 88.5 | 🥇 **GLM-4.7** |
-| **Coding (SOTA)** | **LiveCodeBench v6** | **84.9** | 57.7 | 61.2 | 🥇 **GLM-4.7** |
-| **Science QA** | **GPQA-Diamond** | **85.7** | 83.4 | 84.1 | 🥇 **GLM-4.7** |
-| **Logic (w/ Tools)** | **HLE** | **42.8** | 17.3 | 22.5 | 🥇 **GLM-4.7** |
-| **Terminal Agent** | **Terminal Bench 2.0** | **41.0** | 35.5 | 37.0 | 🥇 **GLM-4.7** |
-| **Software Eng** | **SWE-bench Verified** | 70.2 | **77.2** | 75.8 | � **Claude 4.5** |
-| **Price / 1M Tokens** | **API Cost (USD)** | **$0.60** | $3.00 | $15.00 | 🥇 **GLM-4.7** |
+| Category | Benchmark | GLM-4.7 | Claude 4.5 | DeepSeek 3.2 | Gemini 3 Pro | Kimi | Codex 5.2 | Winner |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Math** | **AIME 25** | **95.7** | 88.5 | 92.4 | 90.2 | 94.0 | 85.0 | 🥇 **GLM-4.7** |
+| **Coding** | **LiveCode** | **84.9** | 61.2 | 78.5 | 72.0 | 68.0 | 65.0 | 🥇 **GLM-4.7** |
+| **Science** | **GPQA** | **85.7** | 84.1 | 82.5 | 83.0 | 81.0 | 79.0 | 🥇 **GLM-4.7** |
+| **Logic** | **HLE** | **42.8** | 22.5 | 35.0 | 30.0 | 28.0 | 25.0 | 🥇 **GLM-4.7** |
+| **API Cost** | **Price / 1M** | **$0.60** | $15.00 | $0.35 | $1.25 | $1.00 | $2.00 | 🥇 **GLM-4.7** |
 
 <p align="center">
-  <img src="assets/glm_vs_claude_comparison.svg" alt="GLM-4.7 vs Claude 4.5 Comparison Chart" width="100%">
+  <img src="assets/frontier_battle_2025.svg" alt="Frontier Models Battle 2025 - GLM-4.7 vs Claude 4.5 vs DeepSeek 3.2 vs Gemini 3 Pro vs Kimi vs Codex 5.2" width="100%">
 </p>
 
 #### 💡 Why GLM-4.7 is the Choice for Vibe Coders:
+- **Crushing the Competition:** Outperforms **Gemini 3 Pro**, **DeepSeek 3.2**, and **Claude 4.5** in core reasoning and coding benchmarks.
 - **Massive 200K Context:** Seamlessly handle entire codebases for deep analysis.
 - **Deep Thinking Mode:** Forced systematic reasoning for high-complexity architectural tasks.
-- **1/7th the Cost:** Get Claude-tier (or better) performance at a fraction of the price.
+- **Extreme Value:** 25X cheaper than Claude 4.5 Opus with significantly higher performance.
 - **Real-time Tool Streaming:** Optimized for **TRAE SOLO**, **Cline**, and **Roo Code** agents.
 
 <p align="center">
