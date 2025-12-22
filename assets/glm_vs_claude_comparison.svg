@@ -1,0 +1,71 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad_glm" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF512F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DD2476;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad_claude" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0a12" rx="20" ry="20"/>
+  <rect x="2" y="2" width="796" height="446" fill="none" stroke="#2a2a3a" stroke-width="1" rx="18" ry="18"/>
+
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="2">GLM-4.7 vs CLAUDE 4.5 OPUS</text>
+  <text x="400" y="75" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#888899" text-anchor="middle">2025 SOTA FRONTIER BENCHMARKS</text>
+
+  <!-- Legend -->
+  <rect x="580" y="90" width="15" height="15" fill="url(#grad_glm)" rx="3"/>
+  <text x="605" y="102" font-family="Arial" font-size="12" fill="#ffffff">GLM-4.7</text>
+  <rect x="680" y="90" width="15" height="15" fill="url(#grad_claude)" rx="3"/>
+  <text x="705" y="102" font-family="Arial" font-size="12" fill="#ffffff">Claude 4.5</text>
+
+  <!-- Benchmark 1: Math (AIME 25) -->
+  <text x="50" y="130" font-family="Arial" font-size="14" fill="#ffffff" font-weight="bold">Math Reasoning (AIME 25)</text>
+  <rect x="50" y="140" width="600" height="25" fill="#1a1a2a" rx="5"/>
+  <rect x="50" y="140" width="574.2" height="25" fill="url(#grad_glm)" rx="5" filter="url(#glow)"/> <!-- 95.7% of 600 -->
+  <text x="635" y="158" font-family="Arial" font-size="14" fill="#FF512F" font-weight="bold">95.7</text>
+  
+  <rect x="50" y="170" width="531" height="12" fill="url(#grad_claude)" rx="3" opacity="0.7"/> <!-- 88.5% of 600 -->
+  <text x="590" y="181" font-family="Arial" font-size="11" fill="#4facfe">88.5</text>
+
+  <!-- Benchmark 2: Coding (LiveCodeBench v6) -->
+  <text x="50" y="220" font-family="Arial" font-size="14" fill="#ffffff" font-weight="bold">Coding Mastery (LiveCodeBench v6)</text>
+  <rect x="50" y="230" width="600" height="25" fill="#1a1a2a" rx="5"/>
+  <rect x="50" y="230" width="509.4" height="25" fill="url(#grad_glm)" rx="5" filter="url(#glow)"/> <!-- 84.9% of 600 -->
+  <text x="570" y="248" font-family="Arial" font-size="14" fill="#FF512F" font-weight="bold">84.9</text>
+  
+  <rect x="50" y="260" width="367.2" height="12" fill="url(#grad_claude)" rx="3" opacity="0.7"/> <!-- 61.2% of 600 -->
+  <text x="430" y="271" font-family="Arial" font-size="11" fill="#4facfe">61.2</text>
+
+  <!-- Benchmark 3: Logic (HLE) -->
+  <text x="50" y="310" font-family="Arial" font-size="14" fill="#ffffff" font-weight="bold">Complex Logic (HLE)</text>
+  <rect x="50" y="320" width="600" height="25" fill="#1a1a2a" rx="5"/>
+  <rect x="50" y="320" width="256.8" height="25" fill="url(#grad_glm)" rx="5" filter="url(#glow)"/> <!-- 42.8% of 600 -->
+  <text x="320" y="338" font-family="Arial" font-size="14" fill="#FF512F" font-weight="bold">42.8</text>
+  
+  <rect x="50" y="350" width="135" height="12" fill="url(#grad_claude)" rx="3" opacity="0.7"/> <!-- 22.5% of 600 -->
+  <text x="195" y="361" font-family="Arial" font-size="11" fill="#4facfe">22.5</text>
+
+  <!-- Bottom Stats / Cost -->
+  <rect x="50" y="390" width="700" height="40" fill="#151525" rx="10"/>
+  <text x="70" y="416" font-family="Arial" font-size="16" fill="#ffffff" font-weight="bold">COST PER 1M TOKENS:</text>
+  <text x="280" y="416" font-family="Arial" font-size="20" fill="#FF512F" font-weight="bold">$0.60</text>
+  <text x="350" y="416" font-family="Arial" font-size="14" fill="#888899">(GLM-4.7)</text>
+  <text x="480" y="416" font-family="Arial" font-size="16" fill="#4facfe" font-weight="bold">VS $15.00</text>
+  <text x="580" y="416" font-family="Arial" font-size="14" fill="#888899">(Claude Opus)</text>
+  
+  <!-- Savings Badge -->
+  <circle cx="730" cy="380" r="40" fill="url(#grad_glm)" filter="url(#glow)"/>
+  <text x="730" y="375" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">25X</text>
+  <text x="730" y="395" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">CHEAPER</text>
+
+</svg>

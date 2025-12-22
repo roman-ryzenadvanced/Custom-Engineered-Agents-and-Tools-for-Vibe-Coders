@@ -42,6 +42,10 @@ The latest **GLM-4.7** has arrived, redefining the frontier of **AI coding agent
 | **Software Eng** | **SWE-bench Verified** | 70.2 | **77.2** | 75.8 | � **Claude 4.5** |
 | **Price / 1M Tokens** | **API Cost (USD)** | **$0.60** | $3.00 | $15.00 | 🥇 **GLM-4.7** |
 
+<p align="center">
+  <img src="assets/glm_vs_claude_comparison.svg" alt="GLM-4.7 vs Claude 4.5 Comparison Chart" width="100%">
+</p>
+
 #### 💡 Why GLM-4.7 is the Choice for Vibe Coders:
 - **Massive 200K Context:** Seamlessly handle entire codebases for deep analysis.
 - **Deep Thinking Mode:** Forced systematic reasoning for high-complexity architectural tasks.
