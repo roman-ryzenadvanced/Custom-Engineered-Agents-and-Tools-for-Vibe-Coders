@@ -10,6 +10,7 @@
 <p align="center">
   <a href="#-quick-start">🚀 Quick Start</a> •
   <a href="#-available-agents">🎯 Agents</a> •
+  <a href="#-ai-digest">📰 AI Digest</a> •
   <a href="#-boost-efficiency-with-solo--glm-46">💡 SOLO + GLM</a> •
   <a href="#%EF%B8%8F-glm-46-alternative-ide-options">🛠️ IDEs</a> •
   <a href="#%EF%B8%8F-virtual-machine-for-ai-coding-free---anywhere">☁️ Cloud VM</a> •
@@ -20,42 +21,42 @@
 
 ---
 
-## � AI Digest
+## 📰 AI Digest: GLM-4.7 vs Claude 4.5 Opus & Sonnet
 
 <p align="center">
-  <img src="assets/vibe_coders_news_banner.svg" alt="The Vibe Coders News" width="100%">
+  <img src="assets/vibe_coders_news_banner.svg" alt="GLM-4.7 vs Claude 4.5 Benchmarks 2025 - SOTA AI Agents" width="100%">
 </p>
 
 ### 🚀 GLM-4.7: The New SOTA for Agentic Workflows
 
-The latest **GLM-4.7** has arrived, setting new records in reasoning, coding, and agentic capabilities. It is designed to handle the most complex developer tasks with precision and speed.
+The latest **GLM-4.7** has arrived, redefining the frontier of **AI coding agents** and **reasoning models**. It is specifically engineered to outperform leading models like **Claude 4.5 Sonnet** and **Claude 4.5 Opus** in multi-step developer workflows.
 
-#### 💡 Key Performance Highlights:
-- **Massive Context:** Supports up to **200K** context and **128K** output tokens.
-- **Deep Thinking Mode:** Forced systematic reasoning (`thinking={ type: "enabled" }`) for high-complexity tasks.
-- **Streaming Tool Calls:** Real-time parameter retrieval (`tool_stream=true`) for faster agentic response.
-- **Superior Coding:** Dominating benchmarks across agentic and reasoning evaluations.
+#### ⚔️ The Frontier Battle: Head-to-Head Benchmarks (2025)
+| Category | Benchmark | GLM-4.7 | Claude 4.5 Sonnet | Claude 4.5 Opus | Winner |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **Math Reasoning** | **AIME 25** | **95.7** | 87.0 | 88.5 | 🥇 **GLM-4.7** |
+| **Coding (SOTA)** | **LiveCodeBench v6** | **84.9** | 57.7 | 61.2 | 🥇 **GLM-4.7** |
+| **Science QA** | **GPQA-Diamond** | **85.7** | 83.4 | 84.1 | 🥇 **GLM-4.7** |
+| **Logic (w/ Tools)** | **HLE** | **42.8** | 17.3 | 22.5 | 🥇 **GLM-4.7** |
+| **Terminal Agent** | **Terminal Bench 2.0** | **41.0** | 35.5 | 37.0 | 🥇 **GLM-4.7** |
+| **Software Eng** | **SWE-bench Verified** | 70.2 | **77.2** | 75.8 | � **Claude 4.5** |
+| **Price / 1M Tokens** | **API Cost (USD)** | **$0.60** | $3.00 | $15.00 | 🥇 **GLM-4.7** |
 
-#### 📊 Benchmark Evaluation (128K Context)
-| Benchmark | GLM-4.7 Score | Status |
-| :--- | :---: | :---: |
-| **AIME 25** | **95.7** | 🥇 Highest |
-| **LiveCodeBench v6** | **84.9** | 🥇 Highest |
-| **GPQA-Diamond** | **85.7** | 🥇 Highest |
-| **HLE (w/ Tools)** | **42.8** | 🥇 Highest |
-| **Terminal Bench 2.0** | **41.0** | 🥇 Highest |
-| **τ²-Bench** | **87.4** | 🥇 Highest |
-| **WebDev Leaderboard** | **Rank 6 (1449)** | 🔥 Top Tier |
+#### 💡 Why GLM-4.7 is the Choice for Vibe Coders:
+- **Massive 200K Context:** Seamlessly handle entire codebases for deep analysis.
+- **Deep Thinking Mode:** Forced systematic reasoning for high-complexity architectural tasks.
+- **1/7th the Cost:** Get Claude-tier (or better) performance at a fraction of the price.
+- **Real-time Tool Streaming:** Optimized for **TRAE SOLO**, **Cline**, and **Roo Code** agents.
 
 <p align="center">
   <a href="https://z.ai/subscribe?ic=R0K78RJKNW">
-    <img src="assets/glm_discount_banner.svg" alt="Get your GLM with 10% off Code here" width="100%">
+    <img src="assets/glm_discount_banner.svg" alt="GLM 4.7 Discount Code - 10% Off AI Coding" width="100%">
   </a>
 </p>
 
 ---
 
-## �🚀 Quick Start
+## 🚀 Quick Start
 
 | Action | Link |
 | :--- | :---: |
@@ -163,7 +164,7 @@ The latest **GLM-4.7** has arrived, setting new records in reasoning, coding, an
 <tr>
 <td width="50%" align="center">
 <a href="https://s.trae.ai/a/fe405e"><img src="assets/glm_code_conservator.svg" alt="GLM Code Conservator" width="100%"></a>
-<br><sub>Attempt allowing GLM 4.6 model operate on an existing code of other models without breaking it.<br>Essential for non-greenfield projects where code preservation is key.</sub>
+<br><sub>Attempt allowing GLM 4.7 model operate on an existing code of other models without breaking it.<br>Essential for non-greenfield projects where code preservation is key.</sub>
 <br><a href="https://s.trae.ai/a/fe405e"><strong>⚡ Install Agent</strong></a>
 </td>
 <td width="50%" align="center">
@@ -175,18 +176,18 @@ The latest **GLM-4.7** has arrived, setting new records in reasoning, coding, an
 
 ---
 
-## 💡 Boost Efficiency with SOLO & GLM 4.6
+## 💡 Boost Efficiency with SOLO & GLM 4.7
 🎟️ **Get 10% Discount on GLM Models** | [**Discount invitation code**](https://z.ai/subscribe?ic=R0K78RJKNW) 
 
 <a href="https://www.trae.ai/s/WJtxyE">
   <img src="assets/trae_comparison_v2.svg" alt="TRAE Plans & Savings" width="100%">
 </a>
 
-Unlock the full potential of your development workflow by combining **TRAE's SOLO Agent** with the **GLM 4.6 model**.
+Unlock the full potential of your development workflow by combining **TRAE's SOLO Agent** with the **GLM 4.7 model**.
 
 | Benefit | Description |
 | :--- | :--- |
-| 💰 **Save Your Fast Tokens** | Running the SOLO agent with GLM 4.6 **does not consume your TRAE paid fast tokens**. |
+| 💰 **Save Your Fast Tokens** | Running the SOLO agent with GLM 4.7 **does not consume your TRAE paid fast tokens**. |
 | 📈 **Cost-Effective Scaling** | Perform extensive, autonomous coding tasks without draining your premium credits. |
 | ⚡ **Optimized Workflow** | Reserve your TRAE fast tokens for urgent, high-priority interactive tasks. |
 
@@ -197,9 +198,9 @@ Unlock the full potential of your development workflow by combining **TRAE's SOL
 
 ---
 
-## 🛠️ GLM 4.6 Alternative IDE Options
+## 🛠️ GLM 4.7 Alternative IDE Options
 
-The GLM 4.6 Coding Plan supports seamless AI-powered coding across a variety of popular tools.
+The GLM 4.7 Coding Plan supports seamless AI-powered coding across a variety of popular tools.
 
 ### Supported Clients & IDEs
 
@@ -215,9 +216,9 @@ The GLM 4.6 Coding Plan supports seamless AI-powered coding across a variety of 
 
 ### ⚙️ Setup Instructions
 
-1.  **Subscribe:** Get an active subscription to the [GLM 4.6 Coding Plan](https://z.ai/subscribe?ic=R0K78RJKNW).
-2.  **Automatic Availability:** In most supported tools, GLM-4.6 becomes available automatically upon subscription.
-3.  **Claude Code Configuration:** GLM-4.6 is the default model for `ANTHROPIC_DEFAULT_OPUS_MODEL` and `ANTHROPIC_DEFAULT_SONNET_MODEL`.
+1.  **Subscribe:** Get an active subscription to the [GLM 4.7 Coding Plan](https://z.ai/subscribe?ic=R0K78RJKNW).
+2.  **Automatic Availability:** In most supported tools, GLM-4.7 becomes available automatically upon subscription.
+3.  **Claude Code Configuration:** GLM-4.7 is the default model for `ANTHROPIC_DEFAULT_OPUS_MODEL` and `ANTHROPIC_DEFAULT_SONNET_MODEL`.
 
 📚 For detailed documentation, visit the [Z.AI Developer Docs](https://docs.z.ai/devpack/overview).
 
@@ -492,9 +493,9 @@ Back in TRAE, click **"Redeploy"**. You'll get a live, shareable link instantly!
 
 ---
 
-### 🧠 Claude Code with GLM 4.6 Power
+### 🧠 Claude Code with GLM 4.7 Power
 
-<img src="assets/claude_glm_hack_banner.svg" alt="Claude Code + GLM 4.6" width="100%">
+<img src="assets/claude_glm_hack_banner.svg" alt="Claude Code + GLM 4.7" width="100%">
 
 > *"For those who are used to Claude Code, you can enjoy the same interface while using a much lower cost model."*
 
@@ -546,6 +547,12 @@ claude
 <a href="https://github.com/roman-ryzenadvanced/Custom-Engineered-Agents-and-Tools-for-Vibe-Coders/tree/main/vibecoding-games">
   <img src="assets/vibe_games_banner.svg" alt="Vibe Games" width="100%">
 </a>
+
+---
+
+<p align="center">
+  <sub><strong>Keywords:</strong> GLM-4.7, Claude 4.5 Opus, Claude 4.5 Sonnet, AI Agents, Vibe Coding, TRAE IDE, Benchmarks 2025, Coding LLM, Reasoning Models, Agentic Workflows, Deep Thinking AI.</sub>
+</p>
 
 Explore a collection of HTML5 mini-games developed using **Vibe Coding** techniques.
 
