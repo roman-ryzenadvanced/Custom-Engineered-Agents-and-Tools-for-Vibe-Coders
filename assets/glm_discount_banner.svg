@@ -1,0 +1,26 @@
+<svg width="700" height="150" viewBox="0 0 700 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad_discount" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF512F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DD2476;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Container -->
+  <rect width="700" height="150" fill="#0a0a12" rx="15" ry="15"/>
+  
+  <!-- Neon Border -->
+  <rect x="2" y="2" width="696" height="146" fill="none" stroke="url(#grad_discount)" stroke-width="3" rx="12" ry="12"/>
+  
+  <!-- Icon -->
+  <text x="80" y="95" font-family="Arial, sans-serif" font-size="60" fill="url(#grad_discount)" opacity="0.8" font-weight="bold">🎟️</text>
+  
+  <!-- Main Title -->
+  <text x="380" y="55" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="2">GET YOUR GLM WITH 10% OFF</text>
+  
+  <!-- Description -->
+  <text x="380" y="90" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#cccccc" text-anchor="middle">Exclusive Discount Code for Vibe Coders Community</text>
+  
+  <!-- Footer CTA -->
+  <text x="680" y="130" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="url(#grad_discount)" text-anchor="end" font-weight="bold" letter-spacing="1.5">REDEEM NOW</text>
+</svg>

@@ -20,7 +20,42 @@
 
 ---
 
-## 🚀 Quick Start
+## � AI Digest
+
+<p align="center">
+  <img src="assets/vibe_coders_news_banner.svg" alt="The Vibe Coders News" width="100%">
+</p>
+
+### 🚀 GLM-4.7: The New SOTA for Agentic Workflows
+
+The latest **GLM-4.7** has arrived, setting new records in reasoning, coding, and agentic capabilities. It is designed to handle the most complex developer tasks with precision and speed.
+
+#### 💡 Key Performance Highlights:
+- **Massive Context:** Supports up to **200K** context and **128K** output tokens.
+- **Deep Thinking Mode:** Forced systematic reasoning (`thinking={ type: "enabled" }`) for high-complexity tasks.
+- **Streaming Tool Calls:** Real-time parameter retrieval (`tool_stream=true`) for faster agentic response.
+- **Superior Coding:** Dominating benchmarks across agentic and reasoning evaluations.
+
+#### 📊 Benchmark Evaluation (128K Context)
+| Benchmark | GLM-4.7 Score | Status |
+| :--- | :---: | :---: |
+| **AIME 25** | **95.7** | 🥇 Highest |
+| **LiveCodeBench v6** | **84.9** | 🥇 Highest |
+| **GPQA-Diamond** | **85.7** | 🥇 Highest |
+| **HLE (w/ Tools)** | **42.8** | 🥇 Highest |
+| **Terminal Bench 2.0** | **41.0** | 🥇 Highest |
+| **τ²-Bench** | **87.4** | 🥇 Highest |
+| **WebDev Leaderboard** | **Rank 6 (1449)** | 🔥 Top Tier |
+
+<p align="center">
+  <a href="https://z.ai/subscribe?ic=R0K78RJKNW">
+    <img src="assets/glm_discount_banner.svg" alt="Get your GLM with 10% off Code here" width="100%">
+  </a>
+</p>
+
+---
+
+## �🚀 Quick Start
 
 | Action | Link |
 | :--- | :---: |
