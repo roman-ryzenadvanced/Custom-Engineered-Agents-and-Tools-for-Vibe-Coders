@@ -51,25 +51,13 @@ The latest **GLM-4.7** has arrived, redefining the frontier of **AI coding agent
 - **Extreme Value:** 25X cheaper than Claude 4.5 Opus with significantly higher performance.
 - **Real-time Tool Streaming:** Optimized for **TRAE SOLO**, **Cline**, and **Roo Code** agents.
 
-### 🛠️ Quick Tutorial: Configure GLM-4.7 in TRAE SOLO
-Setting up the world's most powerful coding model in TRAE is simple. Follow these steps to unlock SOTA performance:
-
-1. **Open TRAE SOLO Settings:** Navigate to the model configuration panel.
-2. **Set Provider:** Select `Z.ai-plan` from the dropdown.
-3. **Select Model:** Choose `Custom Model`.
-4. **Enter Model ID:** Type `glm-4.7` exactly as shown.
-5. **Add API Key:** Paste your unique key from [Z.ai](https://z.ai/subscribe?ic=R0K78RJKNW).
-6. **Confirm:** Click **Confirm** to activate the elite reasoning layer.
-
-<p align="center">
-  <img src="assets/glm_4_7_trae_config.svg" alt="How to configure GLM-4.7 in TRAE SOLO" width="500px">
-</p>
-
 <p align="center">
   <a href="https://z.ai/subscribe?ic=R0K78RJKNW">
     <img src="assets/glm_discount_banner.svg" alt="GLM 4.7 Discount Code - 10% Off AI Coding" width="100%">
   </a>
 </p>
+
+### 🛠️ Quick Tutorial: Configure GLM-4.7 in TRAE SOLO
 
 ---
 
@@ -127,6 +115,18 @@ Setting up the world's most powerful coding model in TRAE is simple. Follow thes
 
 <!-- Specialized Agents -->
 <tr><td colspan="2"><h3>Specialized Agents</h3></td></tr>
+<tr>
+<td width="50%" align="center">
+<a href="https://s.trae.ai/a/e6f8ae?region=sg"><img src="assets/cbt_rule_enforcer.svg" alt="CBT Rule Enforcer" width="100%"></a>
+<br><sub><strong>CBT Rule Enforcer:</strong> Strict protocol for safe, auditable, and structured coding governance.</sub>
+<br><a href="https://s.trae.ai/a/e6f8ae?region=sg"><strong>⚡ Install Agent</strong></a>
+</td>
+<td width="50%" align="center">
+<a href="https://s.trae.ai/a/5835e5?region=sg"><img src="assets/autonomous_selector.svg" alt="Autonomous Selector" width="100%"></a>
+<br><sub><strong>Autonomous Selector:</strong> Discover and select tools for end-to-end task execution without human interaction.</sub>
+<br><a href="https://s.trae.ai/a/5835e5?region=sg"><strong>⚡ Install Agent</strong></a>
+</td>
+</tr>
 <tr>
 <td width="50%" align="center">
 <a href="https://s.trae.ai/a/25f7a7"><img src="assets/kiro_trae_ultra_x.svg" alt="KIRO TRAE ULTRA X" width="100%"></a>
@@ -301,7 +301,21 @@ The **Vision MCP Server** brings GLM-4.5V's advanced visual capabilities directl
 > 📱 **Make your web app installable on Android devices.** This step-by-step guide shows you how to configure Vite for PWA, create an install button component, and handle iOS fallback instructions.
 
 <details>
-<summary><h3>📱 PWA Recipe</h3></summary>
+<summary><h3>�️ CBT Rule Enforcer: Premium Protocol Explained</h3></summary>
+
+The **CBT Rule Enforcer** transforms your AI from an assistant into a **Disciplined Steward**. It enforces a non-negotiable governance framework for mission-critical production environments.
+
+#### **⚡ Core Behavioral Shifts**
+- **React (Halt & Discover):** Forces immediate pause. No guessing. Initiates discovery, intent extraction, and explicit paraphrasing before a single line of code is written.
+- **Enhance (Evidence-First):** Mandates `snippets_before` and `snippets_after` with proof. Generates `rollback_plan.json` and enforces `least_privilege` safety.
+- **Operate (Orchestration):** Strict state machine workflow (Discovery -> Plan -> UserConfirm -> Implement). Every decision is logged with rationale and risk IDs.
+- **Respond (Audit Trail):** Communication shifts to structured artifacts. Requires specific user consent tokens for execution. Maintains an immutable `audit_and_change_log`.
+- **Change (Stewardship):** Prioritizes governance over speed. Transparent reasoning via `context_map.json` and `risk_list.json`. Rigidly prevents silent breaking changes.
+
+</details>
+
+<details>
+<summary><h3>�📱 PWA Recipe</h3></summary>
 
 #### Make your app installable on Android (Complete PWA Recipe)
 

@@ -1,0 +1,21 @@
+<svg width="350" height="180" viewBox="0 0 350 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad_auto" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00c6ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0072ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="350" height="180" fill="url(#grad_auto)" rx="15" ry="15"/>
+  <rect x="10" y="10" width="330" height="160" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3" rx="10" ry="10"/>
+  
+  <circle cx="175" cy="70" r="30" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.5"/>
+  <circle cx="175" cy="70" r="15" fill="#ffffff" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite" />
+  </circle>
+  
+  <text x="175" y="125" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">AUTONOMOUS SELECTOR</text>
+  <text x="175" y="145" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="3" opacity="0.8">ZERO INTERVENTION</text>
+  
+  <path d="M50 50 L70 50 L60 70 Z" fill="#ffffff" opacity="0.4"/>
+  <path d="M280 110 L300 110 L290 130 Z" fill="#ffffff" opacity="0.4" transform="rotate(180 290 120)"/>
+</svg>
