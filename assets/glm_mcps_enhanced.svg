@@ -1,0 +1,25 @@
+<svg width="350" height="180" viewBox="0 0 350 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad_glm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9a9e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fad0c4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="350" height="180" fill="url(#grad_glm)" rx="15" ry="15"/>
+  <rect x="10" y="10" width="330" height="160" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3" rx="10" ry="10"/>
+  
+  <g transform="translate(175, 70)">
+    <!-- Eye/Lens icon for Vision -->
+    <path d="M-30 0 C-30 -15 30 -15 30 0 C30 15 -30 15 -30 0 Z" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.8"/>
+    <circle cx="0" cy="0" r="8" fill="#ffffff" opacity="0.9">
+      <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <!-- Connectors for MCP -->
+    <line x1="-40" y1="0" x2="-50" y2="0" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+    <line x1="40" y1="0" x2="50" y2="0" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+    <line x1="0" y1="-20" x2="0" y2="-30" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <text x="175" y="125" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">GLM MCPs ENHANCED</text>
+  <text x="175" y="145" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="2" opacity="0.8">Z.AI VISION COLLABORATOR</text>
+</svg>

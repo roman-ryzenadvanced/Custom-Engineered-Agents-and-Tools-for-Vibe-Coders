@@ -134,9 +134,9 @@ The latest **GLM-4.7** has arrived, redefining the frontier of **AI coding agent
 <br><a href="https://s.trae.ai/a/25f7a7"><strong>⚡ Install Agent</strong></a>
 </td>
 <td width="50%" align="center">
-<a href="https://s.trae.ai/a/4c48cd"><img src="assets/apex_omni.svg" alt="Apex Omni" width="100%"></a>
-<br><sub>Overclock for lower-end models</sub>
-<br><a href="https://s.trae.ai/a/4c48cd"><strong>⚡ Install Agent</strong></a>
+<a href="https://s.trae.ai/a/21498b?region=sg"><img src="assets/glm_mcps_enhanced.svg" alt="GLM MCPs Enhanced" width="100%"></a>
+<br><sub><strong>GLM MCPs Enhanced:</strong> Design to handle Z.AI MCP services (Vision) for GLM models. <br><i>Credit: Tycen (TRAE Discord) for the base agent.</i></sub>
+<br><a href="https://s.trae.ai/a/21498b?region=sg"><strong>⚡ Install Agent</strong></a>
 </td>
 </tr>
 <tr>
@@ -153,14 +153,25 @@ The latest **GLM-4.7** has arrived, redefining the frontier of **AI coding agent
 </tr>
 <tr>
 <td width="50%" align="center">
+<a href="https://s.trae.ai/a/4c48cd"><img src="assets/apex_omni.svg" alt="Apex Omni" width="100%"></a>
+<br><sub>Overclock for lower-end models</sub>
+<br><a href="https://s.trae.ai/a/4c48cd"><strong>⚡ Install Agent</strong></a>
+</td>
+<td width="50%" align="center">
 <a href="https://s.trae.ai/a/287cc3"><img src="assets/solo_apex.svg" alt="SOLO APEX" width="100%"></a>
 <br><sub>Research-driven architect for AI VIBE coding & complex solutions</sub>
 <br><a href="https://s.trae.ai/a/287cc3"><strong>⚡ Install Agent</strong></a>
 </td>
+</tr>
+<tr>
 <td width="50%" align="center">
 <a href="https://s.trae.ai/a/223b13?region=sg"><img src="assets/flash_to_pro.svg" alt="Flash-to-Pro Cognitive Bridge" width="100%"></a>
 <br><sub>🚀 System Upgrade: Flash-to-Pro Cognitive Bridge<br>Overclock lightweight models to simulate Pro-tier reasoning depth.</sub>
 <br><a href="https://s.trae.ai/a/223b13?region=sg"><strong>⚡ Install Agent</strong></a>
+</td>
+<td width="50%" align="center">
+<img src="assets/coming_soon.svg" alt="Coming Soon" width="100%">
+<br><br><br>
 </td>
 </tr>
 
