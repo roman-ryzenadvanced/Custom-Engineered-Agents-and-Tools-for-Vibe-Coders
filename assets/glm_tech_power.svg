@@ -1,0 +1,57 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad_tech" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f2fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4facfe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow_tech" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#020205" rx="20" ry="20"/>
+  
+  <!-- Tech Grid Effect -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#111122" stroke-width="1"/>
+  </pattern>
+  <rect width="800" height="450" fill="url(#grid)" rx="20" ry="20"/>
+
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="1">GLM-4.7: AGENTIC POWERHOUSE</text>
+
+  <!-- Feature Cards -->
+  <g transform="translate(50, 80)">
+    <!-- Card 1: Context Window -->
+    <rect x="0" y="0" width="220" height="280" fill="#0a0a1a" stroke="#00f2fe" stroke-width="2" rx="15" opacity="0.9"/>
+    <circle cx="110" cy="60" r="30" fill="#00f2fe" opacity="0.1"/>
+    <path d="M95,50 L125,50 L125,75 L95,75 Z M95,55 L115,55 M95,62 L110,62 M95,69 L120,69" stroke="#00f2fe" stroke-width="2" fill="none"/>
+    <text x="110" y="120" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">128K-200K</text>
+    <text x="110" y="145" font-family="Arial" font-size="14" fill="#00f2fe" text-anchor="middle">CONTEXT WINDOW</text>
+    <text x="110" y="180" font-family="Arial" font-size="12" fill="#8888aa" text-anchor="middle">Handles entire file</text>
+    <text x="110" y="195" font-family="Arial" font-size="12" fill="#8888aa" text-anchor="middle">structures with ease.</text>
+
+    <!-- Card 2: Interleaved Thinking -->
+    <rect x="240" y="0" width="220" height="280" fill="#0a0a1a" stroke="#00f2fe" stroke-width="2" rx="15" opacity="0.9" filter="url(#glow_tech)"/>
+    <circle cx="110" cy="60" r="30" fill="#00f2fe" opacity="0.1" transform="translate(240,0)"/>
+    <path d="M335,45 Q350,35 365,45 Q380,55 350,75 Q320,55 335,45" stroke="#00f2fe" stroke-width="2" fill="none"/>
+    <text x="350" y="120" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">THINK-ACT-SOLVE</text>
+    <text x="350" y="145" font-family="Arial" font-size="14" fill="#00f2fe" text-anchor="middle">INTERLEAVED LOGIC</text>
+    <text x="350" y="180" font-family="Arial" font-size="12" fill="#8888aa" text-anchor="middle">Self-corrects and plans</text>
+    <text x="350" y="195" font-family="Arial" font-size="12" fill="#8888aa" text-anchor="middle">before every action.</text>
+
+    <!-- Card 3: All-Tools API -->
+    <rect x="480" y="0" width="220" height="280" fill="#0a0a1a" stroke="#00f2fe" stroke-width="2" rx="15" opacity="0.9"/>
+    <circle cx="110" cy="60" r="30" fill="#00f2fe" opacity="0.1" transform="translate(480,0)"/>
+    <path d="M575,45 L605,45 L605,75 L575,75 Z M585,45 L585,75 M575,60 L605,60" stroke="#00f2fe" stroke-width="2" fill="none"/>
+    <text x="590" y="120" font-family="Arial" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">SOTA AGENT</text>
+    <text x="590" y="145" font-family="Arial" font-size="14" fill="#00f2fe" text-anchor="middle">ALL-TOOLS INTEGRATED</text>
+    <text x="590" y="180" font-family="Arial" font-size="12" fill="#8888aa" text-anchor="middle">Web browsing, terminal,</text>
+    <text x="590" y="195" font-family="Arial" font-size="12" fill="#8888aa" text-anchor="middle">& code execution.</text>
+  </g>
+
+  <!-- Legend -->
+  <text x="400" y="410" font-family="Arial" font-size="14" fill="#4facfe" text-anchor="middle" font-weight="bold">358B PARAMETERS | MoE ARCHITECTURE | OPTIMIZED FOR AGENTS</text>
+</svg>
